@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-05-17 15:56:09
+Date: 2019-05-17 18:05:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -509,11 +509,6 @@ INSERT INTO `thy_menu` VALUES ('122', '115', 'Admin', 'Route', 'delete', '', '1'
 INSERT INTO `thy_menu` VALUES ('123', '115', 'Admin', 'Route', 'ban', '', '1', '0', '路由禁止', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('124', '115', 'Admin', 'Route', 'open', '', '1', '0', '路由启用', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('125', '115', 'Admin', 'Route', 'listorders', '', '1', '0', '路由排序', '', '', '0');
-INSERT INTO `thy_menu` VALUES ('126', '109', 'Admin', 'Mailer', 'default', '', '1', '1', '邮箱配置', '', '', '0');
-INSERT INTO `thy_menu` VALUES ('127', '126', 'Admin', 'Mailer', 'index', '', '1', '1', 'SMTP配置', '', '', '0');
-INSERT INTO `thy_menu` VALUES ('128', '127', 'Admin', 'Mailer', 'index_post', '', '1', '0', '提交配置', '', '', '0');
-INSERT INTO `thy_menu` VALUES ('129', '126', 'Admin', 'Mailer', 'active', '', '1', '1', '注册邮件模板', '', '', '0');
-INSERT INTO `thy_menu` VALUES ('130', '129', 'Admin', 'Mailer', 'active_post', '', '1', '0', '提交模板', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('131', '109', 'Admin', 'Setting', 'clearcache', '', '1', '1', '清除缓存', '', '', '1');
 INSERT INTO `thy_menu` VALUES ('132', '0', 'User', 'Indexadmin', 'default', '', '1', '1', '用户管理', 'group', '', '10');
 INSERT INTO `thy_menu` VALUES ('133', '132', 'User', 'Indexadmin', 'default1', '', '1', '1', '用户组', '', '', '0');
@@ -539,13 +534,10 @@ INSERT INTO `thy_menu` VALUES ('152', '151', 'Admin', 'User', 'edit_post', '', '
 INSERT INTO `thy_menu` VALUES ('153', '149', 'Admin', 'User', 'add', '', '1', '0', '管理员添加', '', '', '1000');
 INSERT INTO `thy_menu` VALUES ('154', '153', 'Admin', 'User', 'add_post', '', '1', '0', '添加提交', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('155', '47', 'Admin', 'Plugin', 'update', '', '1', '0', '插件更新', '', '', '0');
-INSERT INTO `thy_menu` VALUES ('156', '109', 'Admin', 'Storage', 'index', '', '1', '1', '文件存储', '', '', '0');
-INSERT INTO `thy_menu` VALUES ('157', '156', 'Admin', 'Storage', 'setting_post', '', '1', '0', '文件存储设置提交', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('158', '54', 'Admin', 'Slide', 'ban', '', '1', '0', '禁用幻灯片', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('159', '54', 'Admin', 'Slide', 'cancelban', '', '1', '0', '启用幻灯片', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('160', '149', 'Admin', 'User', 'ban', '', '1', '0', '禁用管理员', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('161', '149', 'Admin', 'User', 'cancelban', '', '1', '0', '启用管理员', '', '', '0');
-INSERT INTO `thy_menu` VALUES ('166', '127', 'Admin', 'Mailer', 'test', '', '1', '0', '测试邮件', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('167', '109', 'Admin', 'Setting', 'upload', '', '1', '1', '上传设置', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('168', '167', 'Admin', 'Setting', 'upload_post', '', '1', '0', '上传设置提交', '', '', '0');
 INSERT INTO `thy_menu` VALUES ('169', '7', 'Portal', 'AdminPost', 'copy', '', '1', '0', '文章批量复制', '', '', '0');
@@ -570,14 +562,30 @@ CREATE TABLE `thy_nav` (
   `listorder` int(6) DEFAULT '0' COMMENT '排序',
   `path` varchar(255) NOT NULL DEFAULT '0' COMMENT '层级关系',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='前台导航表';
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='前台导航表';
 
 -- ----------------------------
 -- Records of thy_nav
 -- ----------------------------
-INSERT INTO `thy_nav` VALUES ('1', '1', '0', '首页', '', 'home', '', '1', '0', '0-1');
-INSERT INTO `thy_nav` VALUES ('2', '1', '0', '列表演示', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"1\";}}', '', '1', '0', '0-2');
-INSERT INTO `thy_nav` VALUES ('3', '1', '0', '瀑布流', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"2\";}}', '', '1', '0', '0-3');
+INSERT INTO `thy_nav` VALUES ('1', '1', '0', '主页', '', 'home', '', '1', '0', '0-1');
+INSERT INTO `thy_nav` VALUES ('2', '1', '0', '关于我们', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"1\";}}', '', '1', '0', '0-2');
+INSERT INTO `thy_nav` VALUES ('3', '1', '0', '桃花源家族APP', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"2\";}}', '', '1', '0', '0-3');
+INSERT INTO `thy_nav` VALUES ('4', '1', '2', '桃花源家族介绍', '', 'http://localhost/thy2.0/index.php?m=list&a=index&id=5#values_v01', '', '1', '0', '0-2-4');
+INSERT INTO `thy_nav` VALUES ('5', '1', '2', '运营概括', '', 'http://localhost/thy2.0/index.php?m=list&a=index&id=5#values_v02', '', '1', '0', '0-2-5');
+INSERT INTO `thy_nav` VALUES ('6', '1', '2', '《俱乐部》', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"6\";}}', '', '1', '0', '0-2-6');
+INSERT INTO `thy_nav` VALUES ('7', '1', '2', '《桃花源家族》', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"7\";}}', '', '1', '0', '0-2-7');
+INSERT INTO `thy_nav` VALUES ('8', '1', '2', '俱乐部联盟', '', 'http://localhost/thy2.0/index.php?m=list&a=index&id=8#linkourhome', '', '1', '0', '0-2-8');
+INSERT INTO `thy_nav` VALUES ('9', '1', '2', '桃花源家族服务包', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"9\";}}', '', '1', '0', '0-2-9');
+INSERT INTO `thy_nav` VALUES ('10', '1', '2', '合作机构', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"10\";}}', '', '1', '0', '0-2-10');
+INSERT INTO `thy_nav` VALUES ('11', '1', '3', 'App介绍', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"11\";}}', '', '1', '0', '0-3-11');
+INSERT INTO `thy_nav` VALUES ('12', '1', '3', '俱乐部365', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"12\";}}', '', '1', '0', '0-3-12');
+INSERT INTO `thy_nav` VALUES ('13', '1', '3', '会员特权', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"13\";}}', '', '1', '0', '0-3-13');
+INSERT INTO `thy_nav` VALUES ('14', '1', '3', '商城', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"14\";}}', '', '1', '0', '0-3-14');
+INSERT INTO `thy_nav` VALUES ('15', '1', '3', '个人中心', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"15\";}}', '', '1', '0', '0-3-15');
+INSERT INTO `thy_nav` VALUES ('16', '1', '0', '关注我们', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"3\";}}', '', '1', '0', '0-16');
+INSERT INTO `thy_nav` VALUES ('17', '1', '16', '公众号', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"16\";}}', '', '1', '0', '0-16-17');
+INSERT INTO `thy_nav` VALUES ('18', '1', '16', '微博', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"17\";}}', '', '1', '0', '0-16-18');
+INSERT INTO `thy_nav` VALUES ('19', '1', '16', '400电话', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"18\";}}', '', '1', '0', '0-16-19');
 
 -- ----------------------------
 -- Table structure for `thy_nav_cat`
@@ -818,13 +826,29 @@ CREATE TABLE `thy_terms` (
   `listorder` int(5) NOT NULL DEFAULT '0' COMMENT '排序',
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`term_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类表';
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类表';
 
 -- ----------------------------
 -- Records of thy_terms
 -- ----------------------------
-INSERT INTO `thy_terms` VALUES ('1', '列表演示', '', 'article', '', '0', '0', '0-1', '', '', '', 'list', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('2', '瀑布流', '', 'article', '', '0', '0', '0-2', '', '', '', 'list_masonry', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('1', '关于我们', '', 'article', '', '0', '0', '0-1', '', '', '', 'values', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('2', '桃花源家族APP', '', 'article', '', '0', '0', '0-2', '', '', '', 'list_masonry', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('3', '关注我们', '', 'article', '', '0', '0', '0-3', '', '', '', 'about', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('4', '桃花源家族介绍', '', 'article', '', '1', '0', '0-1-4', '', '', '', 'values', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('5', '运营概括', '', 'article', '', '1', '0', '0-1-5', '', '', '', 'values', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('6', '《俱乐部》', '', 'article', '', '1', '0', '0-1-6', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('7', '《桃花源家族》', '', 'article', '', '1', '0', '0-1-7', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('8', '俱乐部联盟', '', 'article', '', '1', '0', '0-1-8', '', '', '', 'cooperation', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('9', '桃花源家族服务包', '', 'article', '', '1', '0', '0-1-9', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('10', '合作机构', '', 'article', '', '1', '0', '0-1-10', '', '', '', 'cooperation', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('11', 'App介绍', '', 'article', '', '2', '0', '0-2-11', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('12', '俱乐部365', '', 'article', '', '2', '0', '0-2-12', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('13', '会员特权', '', 'article', '', '2', '0', '0-2-13', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('14', '商城', '', 'article', '', '2', '0', '0-2-14', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('15', '个人中心', '', 'article', '', '2', '0', '0-2-15', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('16', '公众号', '', 'article', '', '3', '0', '0-3-16', '', '', '', 'about', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('17', '微博', '', 'article', '', '3', '0', '0-3-17', '', '', '', 'about', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('18', '400电话', '', 'article', '', '3', '0', '0-3-18', '', '', '', 'about', 'article', '0', '1');
 
 -- ----------------------------
 -- Table structure for `thy_term_relationships`
