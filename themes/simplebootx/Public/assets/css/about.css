@@ -1,0 +1,82 @@
+.content {
+	margin-top: 90px;
+	min-height: 400px!important;
+	background: url(../images/about/about_bg.jpg);
+	background-size: 100% 100%;
+	background-position: center;
+	vertical-align: middle;
+}
+#aboutcon{
+	min-height: 400px!important;
+	position: relative;
+}
+.con_center{
+	position: absolute;
+	top: 50%;
+	height: 300px;
+	width: 100%;
+	margin-top: -150px;
+}
+.htitle {
+	display: block;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: myfont02;
+	font-size: 40px;
+	line-height: 60px;
+	margin: 0;
+}
+
+.spantitle {
+	display: block;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 24px;
+}
+.datalist{
+	display: table;
+	margin: 30px auto 0;
+	width: 1200px;
+}
+.datalist .datacon{
+	display: table-cell;
+	width: 400px;
+	vertical-align: middle;
+}
+.datalist .datacon img{
+	display: block;
+	width: 120px;
+	height: 120px;
+	margin: 10px auto;
+}
+.explain{
+	display: block;
+	line-height: 32px;
+	text-align: center;
+	color: #ebede1;
+}
+.label_title{
+	display: block;
+	color: #ebede1;
+	line-height: 32px;
+	font-style: normal;
+	text-align: center;
+}
+.tel_label{
+	display: block;
+	text-align: center;
+	line-height: 140px;
+	font-size: 28px;
+    font-family: myfont02;
+    color: #FFFFFF;
+    font-style: normal;
+}
+.tel_label i{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	background: url(../images/about/phone.png);
+	background-size: 100% 100%;
+	margin-right: 10px;
+}

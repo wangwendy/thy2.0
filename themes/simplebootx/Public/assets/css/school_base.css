@@ -1,0 +1,299 @@
+.content{
+	margin-top: 90px;
+}
+.banner{
+	width: 100%;
+	height: 500px;
+	/*background-image: url(../images/s.jpg);
+	background-size: 100% 100%;
+	background-position: center;*/
+	
+}
+/*****0531*****/
+.banner_left{
+	margin-right: 800px;
+	height: 500px;
+	background-image: url(../images/school_base/school_baser.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.ban_left_con{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	color: #FFFFFF;
+}
+.ban_right_con{
+	height: 100%;
+	width: 100%;
+	color: #FFFFFF;
+	position: relative;
+}
+.ban_left_con img{
+	display: block;
+	margin: 80px auto 30px;
+	width: 300px;
+}
+.ban_left_con span{
+	font-size: 14px;
+	display: block;
+	text-align: center;
+	line-height: 24px;
+}
+.ban_left_con span.span_last{
+	font-family: myfont02;
+	line-height: 30px;
+}
+.ban_right_con span{
+	display: block;
+	line-height: 50px;
+	font-family: myfont02;
+	font-size: 28px;
+	padding-right: 45px;
+	text-align: right;
+	position: absolute;
+	bottom: 15px;
+	right: 10px;
+}
+.ban_left_con:hover{
+	background: rgba(0,0,0,.6);
+}
+.banner_right{
+	width: 800px;
+	float: right;
+	height: 500px;
+	margin-top: -500px;
+	background: url(../images/school_base/base.jpg);
+	background-size: cover;
+	background-position: center;
+}
+/**********/
+
+.base_con{
+	height: 500px;
+	width: 100%;
+}
+.base_left_con{
+	width: 70%;
+	float: left;
+	height: 100%;
+}
+.base_right_con{
+	width: 30%;
+	float: left;
+	height: 100%;
+}
+
+.base_left01{
+	background: url(../images/school_base/school_base01.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.base_left02{
+	background: url(../images/school_base/school_base02.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.base_left03{
+	background: url(../images/school_base/school_base03.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.base_left04{
+	background: url(../images/school_base/school_base04.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.base_right01{
+	background: url(../images/school_base/school_base05.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.base_right02{
+	background: url(../images/school_base/school_base06.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.base_right03{
+	background: url(../images/school_base/school_base07.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.base_right04{
+	background: url(../images/school_base/school_base08.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.link_events_full{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/*.link_events_full:hover{
+	background: rgba(0,0,0,0.5);
+}*/
+.base_hotel{
+	background: #000000;
+	padding: 40px 0;
+	color: #FFFFFF;
+}
+.base_title{
+	font-family: myfont02;
+	line-height: 60px;
+	font-size: 38px;
+	display: block;
+	text-align: center;
+}
+.base_hotel p{
+	width: 80%;
+	margin: 10px auto;
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+}
+.img_scroll{
+	height: 500px;
+    width: 90%;
+    background: #007AFF;
+    margin-top: 20px;
+}
+#amy .swiper-wrapper .swiper-slide{
+	position: relative;
+}
+.hotel_title{
+	position: absolute;
+	bottom: 0;
+	display: block;
+	background: #000000;
+	font-size: 12px;
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	vertical-align: middle;
+}
+.hotel01{
+	background: url(../images/school_base/hotel01.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.hotel02{
+	background: url(../images/school_base/hotel02.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.hotel03{
+	background: url(../images/school_base/hotel03.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.hotel04{
+	background: url(../images/school_base/hotel04.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.hotel05{
+	background: url(../images/school_base/hotel05.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.hotel06{
+	background: url(../images/school_base/hotel06.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.hotel07{
+	background: url(../images/school_base/hotel07.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.hotel08{
+	background: url(../images/school_base/hotel08.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+/*swiper*/
+.swiper-button-prev{
+	width: 0; 
+	height: 0; 
+	border-top: 5px solid transparent; 
+	border-right: 10px solid #FFFFFF; 
+	border-bottom: 5px solid transparent; 
+}
+.swiper-button-next{
+	width: 0; 
+	height: 0; 
+	border-top: 5px solid transparent; 
+	border-left: 10px solid #FFFFFF;
+	border-bottom: 5px solid transparent; 
+}
+.swiper-container-free-mode>.swiper-wrapper {
+    -webkit-transition-timing-function: linear; /*之前是ease-out*/
+    -moz-transition-timing-function: linear;
+    -ms-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+    margin: 0 auto;
+}
+.fontlable{
+	color:#FFFFFF;
+	display: block;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	font-style: normal;
+}
+.left_fade_in{
+	animation: fade-left-in;/*动画名称*/  
+    animation-duration: 1.5s;/*动画持续时间*/  
+    -webkit-animation:fade-left-in 1.5s;/*针对webkit内核*/ 
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode:forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
+}
+.right_fade_in{
+	animation: fade-right-in;/*动画名称*/  
+    animation-duration: 1.5s;/*动画持续时间*/  
+    -webkit-animation:fade-right-in 1.5s;/*针对webkit内核*/ 
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode:forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes fade-left-in {  
+    from{
+    	left: -100%;
+    	}
+    to {
+    		left: 0;
+    }
+}  
+@-webkit-keyframes fade-left-in {/*针对webkit内核*/  
+    from{
+    left: -100%;
+    	}
+    to {
+    		left: 0; 
+    }
+}  
+@keyframes fade-right-in {  
+    from{
+    	right: -100%;
+    	}
+    to {
+    		right: 0;
+    }
+}  
+@-webkit-keyframes fade-right-in {/*针对webkit内核*/  
+    from{
+    right: -100%;
+    	}
+    to {
+    		right: 0; 
+    }
+}  

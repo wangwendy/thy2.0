@@ -1,0 +1,59 @@
+.content{
+	margin-top: 90px;
+}
+.v_con{
+	height: auto;
+	position: relative;/*定位用*/
+}
+.v_con h1{
+	margin: 0;
+	font-size: 42px;
+    line-height: 100px;
+    font-family: myfont02;
+    font-weight: normal;
+    color: #0d1620;
+    text-align: center;
+}
+.v_con img{
+	margin: 0 auto;
+	display: block;
+	width: 1200px;
+}
+.v_con02{
+	height: 700px;
+	background: #d6d8d7;
+}
+.v_con02 h1{
+	margin: 0;
+	font-size: 42px;
+    line-height: 100px;
+    font-family: myfont02;
+    font-weight: normal;
+    color: #0d1620;
+    text-align: center;
+}
+.img_scroll{
+	height: 600px;
+}
+.img_scroll img{
+	width: auto;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.swiper-container-free-mode>.swiper-wrapper {
+    -webkit-transition-timing-function: linear; /*之前是ease-out*/
+    -moz-transition-timing-function: linear;
+    -ms-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+    margin: 0 auto;
+}
+#linkourhome{
+	height: 30px; 
+	width: 100%;
+	position: absolute;
+	bottom: 100px; 
+	left: 0;
+}

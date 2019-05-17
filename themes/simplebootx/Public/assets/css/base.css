@@ -1,0 +1,404 @@
+/************************************************************************************
+RESET
+*************************************************************************************/
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
+dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+img, fieldset {
+	border: 0;
+}
+
+/* set image max width to 100% */
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+/************************************************************************************
+GENERAL STYLING
+*************************************************************************************/
+@font-face {
+	font-family:myfont01;
+	src: url('font/myfont01.eot');
+	src: url('font/myfont01.woff') format('woff'),    
+    		 url('font/myfont01.ttf') format('truetype'),  
+    	     url('font/myfont01.eot?#iefix') format('embedded-opentype'); /* IE9 */ 
+    font-weight: normal;
+    font-style: normal;
+}  
+@font-face {
+	font-family:myfont02;
+	src: url('font/myfont02.eot');
+	src: url('font/myfont02.woff') format('woff'),    
+    		 url('font/myfont02.ttf') format('truetype'),  
+    	     url('font/myfont02.eot?#iefix') format('embedded-opentype'); /* IE9 */ 
+    font-weight: normal;
+    font-style: normal;
+} 
+body {
+	background: #ffffff;
+	font-family: myfont01;
+	color: #071821;
+}
+html,body{height: 100%;}
+a {
+	color: #026acb;
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	margin: 0 0 1.2em;
+	padding: 0;
+}
+
+/* list */
+ul, ol {
+	margin: 0;
+	padding: 0;
+	line-height: 140%;
+}
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4em;
+	margin: 20px 0 .4em;
+	color: #000;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.6em;
+}
+h3 {
+	font-size: 1.4em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5 {
+	font-size: 1.1em;
+}
+h6 {
+	font-size: 1em;
+}
+.pos_r{
+	position: relative;
+}
+.pos_a{
+	position: absolute;
+}
+
+/* reset webkit search input styles */
+input[type=search] {
+	-webkit-appearance: none;
+	outline: none;
+}
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button {
+	display: none;
+}
+/********************
+clearfix
+ **********************/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix { display: block; zoom: 1; }
+
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+.wrap{
+	min-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	min-height: 100%;
+}
+/***********header**************/
+header{
+	width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+     /*ie6下样式，加下划线表示只针对ie6 的hack */
+  _position:absolute;/* 把导航栏位置定义为绝对位置  关键*/
+  _top:expression(documentElement.scrollTop + "px"); /* 把导航栏位置放在浏览器垂直滚动条的顶端  关键 */
+}
+.header_con{
+	padding: 0 45px;
+	background-color:rgba(255,255,255,0);
+	height: 90px;
+	transition: height 10s;
+	-moz-transform: height 10s;
+	-webkit-transform: height 10s;
+	-o-transform: height 10s;
+	overflow: hidden;
+}
+.header_con .logo{
+	height: 55px;
+	float: left;
+	margin: 20px 0 0 0;
+}
+.header_con .logo img{
+	height: 100%;
+}
+.header_con .header_inner_right{
+	float: right;
+	width: 150px;
+	height: 30px;
+	overflow: hidden;
+	line-height: 30px;
+	background: #FFFFFF;
+	border: 1px solid #a7a5a5;
+	margin: 26px 0 0 0;
+	position: relative;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+.header_con .header_inner_right #search{
+	background: #026ACB;
+	background: none;
+	float: left;
+	border: 0;
+	line-height: 30px;
+	height: 30px;
+	width: 95px;
+	padding: 0 0 0 15px;
+	margin: 0;
+	font-size: 14px;
+	outline: none;
+}
+.header_con .header_inner_right #search_btn{
+	float: right;
+}
+.header_con .main_nav{
+	float: right;
+	margin:0 10px 0 0;
+}
+.header_con .main_nav ul.menu li{
+	float: left;
+	line-height: 90px;
+	font-size: 16px;
+}
+.header_con .main_nav ul.menu li a{
+	color: #ebede3;
+    line-height: 30px;
+    padding: 0px 15px;
+    display: inline-block;
+}
+.header_con .main_nav ul.menu li a.onlink{
+	border-bottom: 2px solid #7c98be;
+}
+
+.head_bg{
+	transition: height 10s;
+	-moz-transform: height 10s;
+	-webkit-transform: height 10s;
+	-o-transform: height 10s;
+}
+.header_ccon{
+	padding: 0 45px;
+	background-color:rgba(255,255,255,0.9);
+	height: 90px;
+	display: none;
+	transition: height 10s;
+	-moz-transform: height 10s;
+	-webkit-transform: height 10s;
+	-o-transform: height 10s;
+	overflow: hidden;
+}
+.header_ccon .logo{
+	height: 55px;
+	float: left;
+	margin: 20px 0 0 0;
+}
+.header_ccon .logo img{
+	height: 100%;
+}
+.header_ccon .header_inner_right{
+	float: right;
+	width: 150px;
+	height: 30px;
+	overflow: hidden;
+	line-height: 30px;
+	background: #FFFFFF;
+	border: 1px solid #a7a5a5;
+	margin: 26px 0 0 0;
+	position: relative;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+.header_ccon .header_inner_right #search{
+	background: #026ACB;
+	background: none;
+	float: left;
+	border: 0;
+	line-height: 30px;
+	height: 30px;
+	width: 95px;
+	padding: 0 0 0 15px;
+	margin: 0;
+	font-size: 14px;
+	outline: none;
+}
+.header_ccon .header_inner_right #search_btn{
+	float: right;
+}
+.header_ccon .main_nav{
+	float: right;
+	margin:0 10px 0 0;
+}
+.header_ccon .main_nav ul.menu li{
+	float: left;
+	line-height: 90px;
+	font-size: 16px;
+}
+.header_ccon .main_nav ul.menu li a{
+	color: #0d1620;
+    line-height: 30px;
+    padding: 0px 15px;
+    display: inline-block;
+}
+.header_ccon .main_nav ul.menu li a.onlink{
+	border-bottom: 2px solid #026ACB;
+}
+ul.submenu {
+    display: none;
+    background: #FFFFFF;
+    padding: 10px 0;
+    position: absolute;
+    top: 62px;
+    width: 180px;
+    moz-box-shadow:2px 2px 5px #cccccc; 
+    -webkit-box-shadow:2px 2px 5px #CCCCCC; 
+    box-shadow:2px 2px 5px #CCCCCC;
+}
+
+ul.submenu>li {
+    padding: 0 15px;
+	color: #9d9d9d;
+	line-height: 32px!important;
+	font-size: 14px!important;
+	float: none!important;
+}
+ul.submenu>li>a{
+ color: #9d9d9d!important;
+}
+     
+ul.submenu > li > a:hover{
+    color: #000000!important;
+}
+ul.menu > li:hover > ul.submenu {
+    display: block;
+}
+/***********header  end**************/
+.content {
+	padding-bottom: 300px;/*固定footer始终在最底部*/
+}
+.content1 {
+	padding-bottom: 300px;/*固定footer始终在最底部*/
+}
+/***********header  end**************/
+footer{
+	margin-top: -300px;
+	height: 300px;
+	background: #0d1620;
+    color: #ebede1;
+    min-width: 1200px;
+}
+.foot_left{
+	float: left;
+	margin-top: 40px;
+	width: 34%;
+	margin-left: 6%;
+}
+.foot_left img{
+	height: 50px;
+}
+.foot_left span{
+	display: block;
+}
+.span_tel{
+	font-size: 28px;
+	line-height: 60px;
+	font-family: myfont02;
+}
+.span_email,.span_ads{
+	line-height: 26px;
+}
+.foot_right{
+	float: left;
+	margin-top: 40px;
+	width: 54%;
+	margin-right: 6%;
+}
+.link_box{
+	height: 30px;
+	width: 100%;
+    text-align: right;
+	display: block;
+	line-height: 30px;
+}
+.link_box a{
+	color: #ebede1;
+	font-size: 14px;
+	display: inline-block;
+	margin-left: 20px;
+}
+.fr_bottom{
+	width: 100%;
+	display: block;
+	margin-top: 30pxd;
+}
+.fr_bottom div{
+	float: right;
+	margin-left: 30px;
+	height: 130px;
+	margin-top: 30px;
+	height: 130px;
+}
+.fr_bottom div img{
+	width: 90px;
+	display: block;
+	margin: 0 auto;
+}
+.fr_bottom div span{
+	line-height: 30px;
+	font-size: 12px;
+	display: block;
+	text-align: center;
+	}
+.caseNumber{
+	display: block;
+	font-size: 12px;
+	line-height: 26px;
+	margin-top: 10px;
+}
+.cu{
+	cursor: pointer;
+}
