@@ -1,22 +1,7 @@
 <header class="head_bg">
-	<div class="header_con">
-		<a class="logo" href="__ROOT__/"><img src='__TMPL__Public/assets/images/logo.png' alt="logo" /></a>
-		<nav class="main_nav">
-			<?php
-			$effected_id="menu";
-		  	$filetpl="<a href='\$href' target='\$target'>\$label</a>";
-			$foldertpl="<a href='\$href'>\$label</a>";
-			$ul_class="submenu" ;
-			$li_class="" ;
-			$style="menu";
-			$showlevel=6;
-			$dropdown='dropdown';
-			echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);
-			?>
-		</nav>
-	</div>
-	<div class="header_ccon">
+	<div class="header_ccon" style="display: block;">
 		<a class="logo" href="__ROOT__/"><img src='__TMPL__Public/assets/images/logo02.png' alt="logo" /></a>
+
 		<nav class="main_nav">
 			<?php
 			$effected_id="main-menu";
