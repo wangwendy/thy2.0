@@ -22,17 +22,28 @@
 						<h1 class="htitle">进入你心中的桃花源</h1>
 						<span class="spantitle">您好，认识您是我们的荣幸。</span>
 						<div class="datalist clearfix">
+							<php>
+								$weibo = sp_sql_post(5,'');
+								$smeta=json_decode($weibo['smeta'],true);
+							</php>
 							<div class="datacon cu" onclick="javascript:window.location.href='https://weibo.com/u/6501976907?refer_flag=1001030101_&is_all=1'">
-								<img src="__TMPL__Public/assets/images/about/wei.png" />
-								<span class="explain">桃花源家族官方微博</span>
+								<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" />
+								<span>{$weibo.post_title}</span>
 							</div>
 							<div class="datacon">
-								<img src="__TMPL__Public/assets/images/about/er02.png" />
-								<span class="explain">桃花源家族公众号</span>
+								<php>
+									$gzh = sp_sql_post(4,'');
+									$smeta=json_decode($gzh['smeta'],true);/*把smeta转化成数组*/
+								</php>
+								<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" />
+								<span>{$gzh.post_title}</span>
 							</div>
 							<div class="datacon">
-								<em class="tel_label"><i class="icon_phone"></i>400&nbsp;636&nbsp;1228</em>
-								<em class="label_title">客服热线</em>
+								<php>
+									$tel = sp_sql_post(3,'');
+								</php>
+								<em class="tel_label"><i class="icon_phone"></i>{$tel.post_excerpt}</em>
+								<em class="label_title">{$tel.post_title}</em>
 							</div>
 						</div>
 					</div>

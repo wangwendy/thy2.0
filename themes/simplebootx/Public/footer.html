@@ -1,10 +1,19 @@
 <footer class="clearfix">
 	<div class="foot_left">
 		<img src="__TMPL__Public/assets/images/logo.png" />
-		<span class="span_tel">400&nbsp;&nbsp;636&nbsp;&nbsp;1228</span>
-		<span class="span_ads">北京市朝阳区酒仙桥路10号恒通国际商务园B35栋</span>
-		<span class="span_email">info@thyclub.com</span>
-		<div class="caseNumber">京ICP备18030831号</div>
+		<php>
+			$tel = sp_sql_post(3,'');
+		</php>
+		<span class="span_tel">{$tel.post_excerpt}</span>
+		<php>
+			$address = sp_sql_post(1,'');
+		</php>
+		<span class="span_ads">{$address.post_excerpt}</span>
+		<php>
+			$email = sp_sql_post(2,'');
+		</php>
+		<span class="span_email">{$email.post_excerpt}</span>
+		<div class="caseNumber">{$site_icp}</div>
 	</div>
 	<div class="foot_right">
 		<div class="link_box">
@@ -15,12 +24,21 @@
 		</div>
 		<div class="fr_bottom clearfix">
 			<div>
-				<img src="__TMPL__Public/assets/images/er.png" />
-				<span>桃花源家族公众号</span>
+				<php>
+					$gzh = sp_sql_post(4,'');
+					$smeta=json_decode($gzh['smeta'],true);
+				</php>
+				<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" />
+				<span>{$gzh.post_title}</span>
 			</div>
+			<php>
+				$weibo = sp_sql_post(5,'');
+				$smeta=json_decode($weibo['smeta'],true);
+			</php>
+
 			<div class="cu" onclick="javascript:window.location.href='https://weibo.com/u/6501976907?refer_flag=1001030101_&is_all=1'">
-				<img src="__TMPL__Public/assets/images/weibo.png" />
-				<span>桃花源家族官方微博</span>
+				<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" />
+				<span>{$weibo.post_title}</span>
 			</div>
 		</div>
 	</div>
