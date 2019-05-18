@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-05-17 18:05:02
+Date: 2019-05-18 23:56:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -640,13 +640,15 @@ CREATE TABLE `thy_options` (
   `autoload` int(2) NOT NULL DEFAULT '1' COMMENT '是否自动加载',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='全站配置表';
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='全站配置表';
 
 -- ----------------------------
 -- Records of thy_options
 -- ----------------------------
 INSERT INTO `thy_options` VALUES ('1', 'member_email_active', '{\"title\":\"ThinkCMF\\u90ae\\u4ef6\\u6fc0\\u6d3b\\u901a\\u77e5.\",\"template\":\"<p>\\u672c\\u90ae\\u4ef6\\u6765\\u81ea<a href=\\\"http:\\/\\/www.thinkcmf.com\\\">ThinkCMF<\\/a><br\\/><br\\/>&nbsp; &nbsp;<strong>---------------<strong style=\\\"white-space: normal;\\\">---<\\/strong><\\/strong><br\\/>&nbsp; &nbsp;<strong>\\u5e10\\u53f7\\u6fc0\\u6d3b\\u8bf4\\u660e<\\/strong><br\\/>&nbsp; &nbsp;<strong>---------------<strong style=\\\"white-space: normal;\\\">---<\\/strong><\\/strong><br\\/><br\\/>&nbsp; &nbsp; \\u5c0a\\u656c\\u7684<span style=\\\"FONT-SIZE: 16px; FONT-FAMILY: Arial; COLOR: rgb(51,51,51); LINE-HEIGHT: 18px; BACKGROUND-COLOR: rgb(255,255,255)\\\">#username#\\uff0c\\u60a8\\u597d\\u3002<\\/span>\\u5982\\u679c\\u60a8\\u662fThinkCMF\\u7684\\u65b0\\u7528\\u6237\\uff0c\\u6216\\u5728\\u4fee\\u6539\\u60a8\\u7684\\u6ce8\\u518cEmail\\u65f6\\u4f7f\\u7528\\u4e86\\u672c\\u5730\\u5740\\uff0c\\u6211\\u4eec\\u9700\\u8981\\u5bf9\\u60a8\\u7684\\u5730\\u5740\\u6709\\u6548\\u6027\\u8fdb\\u884c\\u9a8c\\u8bc1\\u4ee5\\u907f\\u514d\\u5783\\u573e\\u90ae\\u4ef6\\u6216\\u5730\\u5740\\u88ab\\u6ee5\\u7528\\u3002<br\\/>&nbsp; &nbsp; \\u60a8\\u53ea\\u9700\\u70b9\\u51fb\\u4e0b\\u9762\\u7684\\u94fe\\u63a5\\u5373\\u53ef\\u6fc0\\u6d3b\\u60a8\\u7684\\u5e10\\u53f7\\uff1a<br\\/>&nbsp; &nbsp; <a title=\\\"\\\" href=\\\"http:\\/\\/#link#\\\" target=\\\"_self\\\">http:\\/\\/#link#<\\/a><br\\/>&nbsp; &nbsp; (\\u5982\\u679c\\u4e0a\\u9762\\u4e0d\\u662f\\u94fe\\u63a5\\u5f62\\u5f0f\\uff0c\\u8bf7\\u5c06\\u8be5\\u5730\\u5740\\u624b\\u5de5\\u7c98\\u8d34\\u5230\\u6d4f\\u89c8\\u5668\\u5730\\u5740\\u680f\\u518d\\u8bbf\\u95ee)<br\\/>&nbsp; &nbsp; \\u611f\\u8c22\\u60a8\\u7684\\u8bbf\\u95ee\\uff0c\\u795d\\u60a8\\u4f7f\\u7528\\u6109\\u5feb\\uff01<br\\/><br\\/>&nbsp; &nbsp; \\u6b64\\u81f4<br\\/>&nbsp; &nbsp; ThinkCMF \\u7ba1\\u7406\\u56e2\\u961f.<\\/p>\"}', '1');
-INSERT INTO `thy_options` VALUES ('6', 'site_options', '            {\r\n            		\"site_name\":\"桃花源家族\",\r\n            		\"site_host\":\"http://localhost/\",\r\n            		\"site_root\":\"\",\r\n            		\"site_icp\":\"\",\r\n            		\"site_admin_email\":\"yuehuiwang@yeah.net\",\r\n            		\"site_tongji\":\"\",\r\n            		\"site_copyright\":\"\",\r\n            		\"site_seo_title\":\"桃花源家族\",\r\n            		\"site_seo_keywords\":\"桃花源家族\",\r\n            		\"site_seo_description\":\"桃花源家族\"\r\n        }', '1');
+INSERT INTO `thy_options` VALUES ('6', 'site_options', '{\"site_name\":\"\\u6843\\u82b1\\u6e90\\u5bb6\\u65cf\",\"site_admin_url_password\":\"\",\"site_tpl\":\"simplebootx\",\"site_adminstyle\":\"flat\",\"site_icp\":\"\\u4eacICP\\u590718030831\\u53f7\",\"site_admin_email\":\"info@thyclub.com\",\"site_tongji\":\"\",\"site_copyright\":\"\",\"site_seo_title\":\"\\u6843\\u82b1\\u6e90\\u5bb6\\u65cf\",\"site_seo_keywords\":\"\\u6843\\u82b1\\u6e90\\u5bb6\\u65cf\",\"site_seo_description\":\"\\u6843\\u82b1\\u6e90\\u5bb6\\u65cf\",\"urlmode\":\"0\",\"html_suffix\":\"\",\"comment_time_interval\":\"60\"}', '1');
+INSERT INTO `thy_options` VALUES ('7', 'cmf_settings', '{\"banned_usernames\":\"\"}', '1');
+INSERT INTO `thy_options` VALUES ('8', 'cdn_settings', '{\"cdn_static_root\":\"\"}', '1');
 
 -- ----------------------------
 -- Table structure for `thy_plugins`
@@ -704,11 +706,16 @@ CREATE TABLE `thy_posts` (
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`),
   KEY `post_date` (`post_date`) USING BTREE
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Portal文章表';
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Portal文章表';
 
 -- ----------------------------
 -- Records of thy_posts
 -- ----------------------------
+INSERT INTO `thy_posts` VALUES ('1', '1', '', '', '2019-05-18 18:11:41', '<pre style=\"background-color: rgb(255, 255, 255); font-family: 宋体; font-size: 9.6pt;\">北京市朝阳区酒仙桥路10号恒通国际商务园B35栋</pre>', '地址', '北京市朝阳区酒仙桥路10号恒通国际商务园B35栋', '1', '1', '2019-05-18 18:25:44', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('2', '1', '', '', '2019-05-18 18:12:47', '<pre style=\"background-color: rgb(255, 255, 255); font-family: 宋体; font-size: 9.6pt;\">info@thyclub.com</pre>', '邮箱 ', 'info@thyclub.com', '1', '1', '2019-05-18 18:26:49', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('3', '1', '', '', '2019-05-18 18:13:15', '<p>400&nbsp;&nbsp;636&nbsp;&nbsp;1228</p>', '客服热线', '400  636  1228', '1', '1', '2019-05-18 18:41:45', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190518\\/5cdfe15ab0d18.png\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('4', '1', '', '', '2019-05-18 18:16:26', '', '桃花源家族公众号', '', '1', '1', '2019-05-18 18:20:35', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190518\\/5cdfdbbc718eb.png\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('5', '1', '', '', '2019-05-18 18:21:01', '', '桃花源家族官方微博', '', '1', '1', '2019-05-18 18:29:53', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190518\\/5cdfde9ecddd4.png\",\"template\":\"\"}', '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for `thy_role`
@@ -862,11 +869,16 @@ CREATE TABLE `thy_term_relationships` (
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`tid`),
   KEY `term_taxonomy_id` (`term_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表';
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表';
 
 -- ----------------------------
 -- Records of thy_term_relationships
 -- ----------------------------
+INSERT INTO `thy_term_relationships` VALUES ('1', '1', '3', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('2', '2', '3', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('3', '3', '18', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('4', '4', '16', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('5', '5', '17', '0', '1');
 
 -- ----------------------------
 -- Table structure for `thy_users`
@@ -900,7 +912,7 @@ CREATE TABLE `thy_users` (
 -- ----------------------------
 -- Records of thy_users
 -- ----------------------------
-INSERT INTO `thy_users` VALUES ('1', 'admin', '###ae1da85ebe5d0e175e3cfd5c550d6fc6', 'admin', 'yuehuiwang@yeah.net', '', null, '0', '2000-01-01', null, '0.0.0.0', '2019-05-17 15:44:45', '2019-05-17 03:41:59', '', '1', '0', '1', '0', '');
+INSERT INTO `thy_users` VALUES ('1', 'admin', '###ae1da85ebe5d0e175e3cfd5c550d6fc6', 'admin', 'yuehuiwang@yeah.net', '', null, '0', '2000-01-01', null, '0.0.0.0', '2019-05-18 18:03:29', '2019-05-17 03:41:59', '', '1', '0', '1', '0', '');
 
 -- ----------------------------
 -- Table structure for `thy_user_favorites`
