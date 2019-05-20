@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<tc_include file="Public:head" />
+		<!-- page css-->
+		<link rel="stylesheet" href="__TMPL__Public/assets/css/magazine.css" />
+		<!-- html5.js for IE less than 9 -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="wrap">
+			<tc_include file="Public:nav2" />
+			<div class="content">
+				<div class="banner clearfix">
+					<div class="banner_lcon">
+						<span class="spantitle">《俱乐部》</span>
+						<span class="spantitle">《桃花源家族》</span>
+						<span class="spantitle2">杂志订阅</span>
+						<div class="joinM">
+					    		<a href="app.html">了解更多</a>
+					    </div>
+					</div>
+					<div class="banner_right swiper-container">
+						<div class="swiper-wrapper">
+					        <div class="swiper-slide">
+					        		<img src="__TMPL__Public/assets/images/magazine/magazine01.jpg" />
+					        </div>
+					        <div class="swiper-slide">
+					        		<img src="__TMPL__Public/assets/images/magazine/magazine02.jpg" />
+					        </div>
+					        <div class="swiper-slide">
+					        		<img src="__TMPL__Public/assets/images/magazine/magazine03.jpg" />
+					        </div>
+					        <div class="swiper-slide">
+					        		<img src="__TMPL__Public/assets/images/magazine/magazine04.jpg" />
+					        </div>
+					        <div class="swiper-slide">
+					        		<img src="__TMPL__Public/assets/images/magazine/magazine01.jpg" />
+					        </div>
+					        <div class="swiper-slide">
+					        		<img src="__TMPL__Public/assets/images/magazine/magazine03.jpg" />
+					        </div>
+					        <div class="swiper-slide">
+					        		<img src="__TMPL__Public/assets/images/magazine/magazine04.jpg" />
+					        </div>
+					    </div>
+					    <div class="swiper-button-prev"></div>
+					    <div class="swiper-button-next"></div>
+					</div>
+				</div>
+				<div class="magaz magaz01 clearfix">
+					<div class="magazinecon">
+						<h2 class="titleh2">《俱乐部》</h2>
+						<span>"始终以报道中国的俱乐部生活为主要方向。"</span>
+						<p>《俱乐部》杂志聚焦俱乐部、社群领域与公众生活之间的关系.
+						2017年做了大量的运动竞技类俱乐部、俱乐部创始人、管理者的采访。杂志报道分成两个方向，
+						总结各个俱乐部在管理、运营上的方法，传播每个俱乐部的核心理念与其倡导的运动生活方式。
+						2018年，杂志将深耕B2B2C模式，搭建媒体、行业与用户之间良性关系。
+                        </p>
+				    </div>
+					<img src="__TMPL__Public/assets/images/magazine/bg01.jpg" />
+				</div>
+				<div class="magaz magaz02 clearfix">
+					<div class="magazinecon">
+						<h2 class="titleh2">《桃花源家族》</h2>
+						<span>关注高端人群的生活方式。时尚，更尊崇文化；物质，更蕴含精神；享受，更强调责任。</span>
+						<p>《桃花源家族》杂志创刊于2017年，坚持只呈现——最鲜活的大牌趋势，
+							最生动的精英访谈，最深入的幕后故事，最新颖的人文话题，最独特的别册专刊。
+							《桃花源家族》全方位出击，  以优雅的文字，触动内心最柔软的部分； 
+							 以优美的图片，勾勒世间最美好的向往；  以优质的活动，聚拢圈层最真诚的交流。
+                        </p>
+				    </div>
+					<img src="__TMPL__Public/assets/images/magazine/bg02.jpg" />
+				</div>
+			</div> 
+		</div>
+		<tc_include file="Public:footer" />
+		<script type="text/javascript" src="__TMPL__Public/assets/lib/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="__TMPL__Public/assets/lib/swiper-4.2.6.min.js" ></script>
+		<script>
+              //swiper
+              var mySwiper = new Swiper ('.swiper-container', {
+				    direction: 'horizontal',
+				    slidesPerView : 3,
+				    grabCursor : true,
+				    loop : false,
+				    // 如果需要前进后退按钮
+				    navigation: {
+				      nextEl: '.swiper-button-next',
+				      prevEl: '.swiper-button-prev',
+				    },
+				})  
+				var imgh= $(".swiper-slide img").height();
+				$(".banner_lcon").css("height", imgh);
+        </script>
+	</body>
+
+</html>

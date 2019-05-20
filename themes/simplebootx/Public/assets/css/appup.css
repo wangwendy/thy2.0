@@ -1,0 +1,103 @@
+.content1{
+	min-height: 400px;
+	width: 100%;
+	background-image: url(../images/appup/bannerbg.png);
+	background-repeat: no-repeat;
+	background-size:1000px;
+	background-position: left top;
+	text-align: center;
+	padding-bottom: 350px;
+}
+.bannercon{
+	width: 100%;
+	text-align: center;
+	padding-top: 400px;
+}
+.applogo{
+	display: block;
+    width: 90px;
+    margin: 0 auto 10px;
+}
+.member_title{
+	color: #000000;
+	font-size: 50px;
+	font-family: myfont02;
+	line-height: 80px;
+	display: block;
+}
+.joinMember01{
+	margin: 20px 45px;
+	display: inline-block;
+	border: 1px solid #FFFFFF;
+}
+.joinMember01 a{
+	background: #FFFFFF;
+	color: #061620;
+	padding: 5px 10px;
+	margin: 3px;
+	display: block;
+}
+.joinMember01:hover{
+	border: 1px solid #7c98be;
+}
+.joinMember01 a:hover{
+	background: #7c98be;
+	color: #FFFFFF;
+}
+.joinM{
+	border: 1px solid #000000;
+	margin-top: 15px;
+	display: inline-block;
+}
+.joinM a{
+	background: #000000;
+	color: #FFFFFF;
+	padding: 5px 10px;
+	margin: 3px;
+	display: block;
+}
+.joinM:hover{
+	border: 1px solid #7c98be;
+}
+.joinM a:hover{
+	background: #7c98be;
+	color: #FFFFFF;
+}
+.bannercon p{
+	line-height: 30px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.m_t100{
+	margin-top: 100px;
+}
+.ser_box{
+	width: 600px;
+	margin: 20px auto;
+}
+.ser_box em{
+	line-height: 124px;
+    color: #BB937F;
+    font-style: normal;
+    font-size: 50px;
+}
+.ser_box span{
+	float: left;
+	display: inline-block;
+	padding: 20px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 30px;
+	border: 2px solid rgba(187,147,127,1);
+}
+.appnavbox{
+	width: 310px;
+	float: right;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: #B69481;
+	padding: 22px;
+}
+.appnavbox img{
+	height: 80px;

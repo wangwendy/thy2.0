@@ -31,6 +31,10 @@
     font-weight: normal;
     color: #0d1620;
     text-align: center;
+    padding-top: 50px;
+}
+.v_con02 p{
+	text-align: center;
 }
 .img_scroll{
 	height: 600px;
