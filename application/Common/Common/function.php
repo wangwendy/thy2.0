@@ -71,7 +71,6 @@ function sp_get_current_userid(){
  */
 function sp_get_host(){
 	$host=$_SERVER["HTTP_HOST"];
-//    $host = 'http://www.thyclub.com';
 	$protocol=is_ssl()?"https://":"http://";
 	return $protocol.$host;
 }
@@ -880,11 +879,10 @@ function sp_get_asset_upload_path($file,$style=''){
 	}else if(strpos($file,"/")===0){
 		return $file;
 	}else{
-//	    $filepath=C("TMPL_PARSE_STRING.__UPLOAD__");
-        $filepath='/data/upload/'.$file;
+	    $filepath=C("TMPL_PARSE_STRING.__UPLOAD__").$file;
 		if(C('FILE_UPLOAD_TYPE')=='Local'){
 	        if(strpos($filepath,"http")!==0){
-	            $filepath='http://www.thyclub.com'.$filepath;
+	            $filepath=sp_get_host().$filepath;
 	        }
 		}
 		
