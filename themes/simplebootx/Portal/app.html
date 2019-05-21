@@ -16,33 +16,35 @@
 		<div class="wrap">
 			<tc_include file="Public:nav2" />
 			<div class="content1">
+				<php>
+					$app1 = sp_sql_post(17,'');
+					$app2 = sp_sql_post(18,'');
+					$smeta1 = json_decode($app2['smeta'], true);
+					$app3 = sp_sql_post(19,'');
+					$app4 = sp_sql_post(20,'');
+					$smeta4 = json_decode($app4['smeta'], true);
+				</php>
 				<div class="banner clearfix">
 					<div class="bannercon">
-						<span class="member_title">桃花源家族会员权益</span>
-						<div class="e_member_title">THY&nbsp;&nbsp;SOCIALITES&nbsp;&nbsp;<em>PRIVILEGED</em>&nbsp;&nbsp;<em>SERVICE</em></div>
+						<span class="member_title">{$app1.post_title}</span>
+						{$app1.post_content}
 					    <div class="joinM">
-					    		<a href="about.html">成为会员</a>
+					    		<a href="{:leuu('portal/list/index',array('id'=>3))}">{$app1.post_excerpt}</a>
 					    </div>
 					</div>
 				</div>
 				<div class="appcon_01 clearfix" id="app01">
-					<img class="phone01" src="__TMPL__Public/assets/images/app/phone01.png" />
-					<div class="line"></div>
-					<span class="spantitle">桃花源家族APP分为四大板块</span>
+					<img class="phone01" src="{:sp_get_asset_upload_path($smeta1['thumb'])}" />
+					<span class="spantitle">{$app2.post_title}</span>
 					<div class="appnavbox">
-						<img src="__TMPL__Public/assets/images/app/appnva01.png" />
-						<img src="__TMPL__Public/assets/images/app/appnva02.png" />
-						<img src="__TMPL__Public/assets/images/app/appnva03.png" />
-						<img src="__TMPL__Public/assets/images/app/appnva04.png" />
+						<volist name="smeta1['photo']" id="photo">
+							<img src="{:sp_get_asset_upload_path($photo['url'])}" />
+						</volist>
 					</div>
 				</div>
 				<div class="appcon_02 clearfix" id="app02">
-					<h2 class="titleh2">桃花源家族俱乐部365</h2>
-					<span>“我们是创造精致生活的设计师，为您打造浸入式品质生活。”</span>
-					<span>桃花源家族学院是中国首家“生活方式美学提升学院”。</span>
-					<span>以“生活美学”“生命美学”“城市美学”为主线，涵盖所有独创跨界生活方式产品，</span>
-					<span>用专业的态度探索市场，帮助国内高净值家庭重构美学定义，</span>
-                    <span>打开更多元更意趣的生活灵感。</span>
+					<h2 class="titleh2">{$app3.post_title}</h2>
+					{$app3.post_content}
                     <div class="btncon">
                     		<div class="joinMember02">
 						    	<a href="events_series.html">精选活动/课程</a>
@@ -65,88 +67,83 @@
                     </div>
 				</div>
 				<div class="appcon_03 clearfix" id="app03">
-					<h2 class="titleh2">会员特权</h2>
+					<h2 class="titleh2">{$app4.post_title}</h2>
                     <div class="imgbox clearfix">
                     		<div class="imgb_l02">
-                    			<img src="__TMPL__Public/assets/images/app/appnva02.png" />
-                    			<span> 在“会员特权”版块中集合了桃花源家族</span>
-                    			<span> 所有会员精品专享特权，</span> 
-                    			<span> 从多种层面为我们的  </span>
-                    			<span> 会员打造多样便捷的生活方式。</span>
+                    			<img src="{:sp_get_asset_upload_path($smeta4['thumb'])}" />
+								{$app4.post_content}
                     		</div>
                     		<div class="imgb_r">
-	                    		<img src="__TMPL__Public/assets/images/app/phone03.png" />
+								<volist name="smeta4['photo']" id="photo">
+									<img src="{:sp_get_asset_upload_path($photo['url'])}" />
+								</volist>
                     		</div>
                     </div>
 				</div>
+				<php>
+					$app5 = sp_sql_post(21,'');
+					$smeta5 = json_decode($app5['smeta'], true);
+					$app6 = sp_sql_post(22,'');
+					$app7 = sp_sql_post(23,'');
+					$app8 = sp_sql_post(24,'');
+					$smeta8 = json_decode($app8['smeta'], true);
+					$app9 = sp_sql_post(25,'');
+					$smeta9 = json_decode($app9['smeta'], true);
+					$app10 = sp_sql_post(26,'');
+					$app11 = sp_sql_post(27,'');
+				</php>
 				<div class="member_con02 clearfix">
 					<div class="member_con02_left">
-						<img src="__TMPL__Public/assets/images/app/logo_03.png" />
-						<span class="labelspan01">GLOBAL 2100+HOTEL <em>PRIVILEGE COURTESY</em></span>
-						<span class="labelspan02">全球 2100+ 高端酒店度假村预定及特殊礼遇</span>
+						<img src="{:sp_get_asset_upload_path($smeta5['thumb'])}" />
+						<span class="labelspan01">{$app5.post_keywords}<em>{$app5.post_excerpt}</em></span>
+						<span class="labelspan02">{$app5.post_title}</span>
 						<div class="joinMember">
-							<a href="about.html">成为会员</a>
+							<a href="{:leuu('portal/list/index',array('id'=>3))}">成为会员</a>
 						</div>
 					</div>
 					<div class="member_con02_right">
-						<span class="contitle">酒店权益</span>
-						<span class="spantitle02">特权项目</span>
-						<p>
-							与全球2100多家酒店和度假村合作;<br/> 享受独特的优惠和设施;
-							<br/> 比美国运通百夫长多20%的酒店合作伙伴;
-							<br/> 即时预订、可用性强;
-							<br/> 保证最优惠价格。
-							<br/>
-						</p>
-						<span class="spantitle02">会员权益</span>
-						<p>
-							双人早餐、客房升级特权;<br/> 定制的欢迎生命：例如来自相应的俱乐部的问候，或作为尊贵会员享受客房升级;
-							<br/> 每次入住获得100美金的午餐/晚餐/水疗或设施的消费抵用券;
-							<br/> 延迟至4点退房、高速无线网特权;
-							<br/> 可获得相应的会员积分。
-							<br/>
-						</p>
+						<span class="contitle">{$app8.post_title}</span>
+						<span class="spantitle02">{$app6.post_title}</span>
+						{$app6.post_content}
+						<span class="spantitle02">{$app7.post_excerpt}</span>
+						{$app7.post_content}
 					</div>
 				</div>
 				<div class="appcon_04 clearfix">
-					<img src="__TMPL__Public/assets/images/app/applogo.jpg" />
+					<img src="{:sp_get_asset_upload_path($smeta8['thumb'])}" />
 					<div class="hotelimg"></div>
 				</div>
 				<div class="member_con03 clearfix">
 					<div class="member_con03_left"></div>
 					<div class="member_con03_right">
 						<div class="mcc03_left">
-							<span class="contitle">餐厅权益</span>
-							<span class="spantitle03">特权项目</span>
-							<p>
-								与全球100+米其林级餐厅品牌合作;<br/> 
-								即时预订、可用性强;<br/> 
-								全球市场持续更新中。
-							</p>
-							<span class="spantitle03">会员权益</span>
-							<p>
-								优先预定;<br/> 
-								代表所属俱乐部定制迎宾礼;<br/> 
-								免费饮料或甜点。
-							</p>
-							<div class="joinM"><a href="about.html">成为会员</a></div>
+							<span class="contitle">{$app9.post_title}</span>
+							<span class="spantitle03">{$app10.post_title}</span>
+							{$app10.post_content}
+							<span class="spantitle03">{$app11.post_excerpt}</span>
+							{$app11.post_content}
+							<div class="joinM"><a href="{:leuu('portal/list/index',array('id'=>3))}">成为会员</a></div>
 						</div>
 						<div class="mcc03_right">
-							<img src="__TMPL__Public/assets/images/app/member03.jpg" />
+							<img src="{:sp_get_asset_upload_path($smeta9['thumb'])}" />
 						</div>
 					</div>
 				</div>
 				<div class="appcon_05 clearfix">
 					<span>全球<em class="num">1300</em> 1300+米其林及高端餐厅预定</span>
 				</div>
+				<php>
+					$app12 = sp_sql_post(28,'');
+					$smeta12 = json_decode($app12['smeta'], true);
+				</php>
 				<div class="appcon_06 clearfix" id="app04">
 					<div class="appconbox">
-						<img src="__TMPL__Public/assets/images/app/phone04.png" />
+						<img src="{:sp_get_asset_upload_path($smeta12['thumb'])}" />
 						<div class="appcon_tl">
-							<h2 class="titleh2">商城权益</h2>
-							<p>桃花源家族为会员提供多层次、多维度的生活服务内容。从健康管理特权到绿色饮食体验，从公务包机礼遇到私密旅行定制。多样化的特权服务让我们的会员不管是公务还是生活，都能有多一分的便捷与享受。</p>
+							<h2 class="titleh2">{$app12.post_title}</h2>
+							{$app12.post_content}
 							<div class="joinMember02">
-							    	<a href="about.html">成为会员</a>
+							    	<a href="{:leuu('portal/list/index',array('id'=>3))}">成为会员</a>
 							</div>
 						</div>
 					</div>
@@ -161,22 +158,18 @@
 				</div>
 				<div class="appcon_08 clearfix" id="app05">
 					<div class="appconbox clearfix">
+						<php>
+							$app13 = sp_sql_post(29,'');
+							$app14 = sp_sql_post(30,'');
+						</php>
 						<div class="appcon_tl" style="margin-left: 0;">
 							<h2 class="titleh22">个人中心</h2>
-							<span class="spantitle03">特权项目</span>
-							<p>
-								与全球100+米其林级餐厅品牌合作;<br/> 
-								即时预订、可用性强;<br/> 
-								全球市场持续更新中。
-							</p>
-							<span class="spantitle03">会员权益</span>
-							<p>
-								优先预定;<br/> 
-								代表所属俱乐部定制迎宾礼;<br/> 
-								免费饮料或甜点。
-							</p>
+							<span class="spantitle03">{$app13.post_excerpt}</span>
+							{$app13.post_content}
+							<span class="spantitle03">{$app14.post_excerpt}</span>
+							{$app14.post_content}
 							<div class="joinMember02">
-							    	<a href="about.html">成为会员</a>
+							    	<a href="{:leuu('portal/list/index',array('id'=>3))}">成为会员</a>
 							</div>
 						</div>
 						<img src="__TMPL__Public/assets/images/app/phone05.png" />

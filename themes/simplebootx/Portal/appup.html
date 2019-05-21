@@ -15,25 +15,32 @@
 	<body onload="eScrolltop();">
 		<div class="wrap">
 			<tc_include file="Public:nav2" />
+			<php>
+				$app = sp_sql_post(15,'');
+				$smeta=json_decode($app['smeta'],true);
+				$service = sp_sql_post(16,'');
+				$smeta1=json_decode($service['smeta'], true);
+			</php>
 			<div class="content1">
 				<div class="bannercon">
-					<img class="applogo" src="i__TMPL__Public/assets/mages/appup/applogo.png" />
-					<span class="member_title">桃花源家族APP正式上线</span>
-					<p> 1月6日，桃花源家族退出的APP正式上线，为您带来多项特权服务的同时还有<br/>桃花源家族精彩的会员活动体验和专属课程。<br/>桃花源家族APP主要分为4个板块，俱乐部365、VIP特权、商城和个人中心。<br/>我们是创造精致生活的设计师，为您打造浸入式品质生活。 </p>
+					<img class="applogo" src="{:sp_get_asset_upload_path($smeta['thumb'])}" />
+					<span class="member_title">{$app.post_title}</span>
+					{$app.post_content}
 					<div class="joinM">
-						<a href="about.html">会员权益</a>
+						<a href="{:leuu('portal/list/index',array('id'=>2))}">{$app.post_excerpt}</a>
 					</div>
-					<span class="member_title m_t100">桃花源家族服务包</span>
+					<span class="member_title m_t100">{$service.post_title}</span>
 					<div class="ser_box clearfix">
-						<span>俱&nbsp;&nbsp;乐&nbsp;&nbsp;部<br/>已有服务</span>
+						<span>{$service.post_keywords}<br/>{$service.post_excerpt}</span>
 						<em>+</em>
+
 						<div class="appnavbox">
-							<img src="__TMPL__Public/assets/images/app/appnva01.png" />
-							<img src="__TMPL__Public/assets/images/app/appnva02.png" />
-							<img src="__TMPL__Public/assets/images/app/appnva03.png" />
+							<volist name="smeta1['photo']" id="photo">
+								<img src="{:sp_get_asset_upload_path($photo['url'])}" />
+							</volist>
 						</div>
 					</div>
-					<p>桃花源家族开放经过整合的优质内容、服务特权和商品特权，与俱乐部已有服务一起<br/>更好的满足客户需求，形成“+”服务。</p>
+					{$service.post_content}
 				</div>
 		    </div>
 		</div>
