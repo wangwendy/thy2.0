@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-05-18 23:56:24
+Date: 2019-05-21 16:36:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -577,11 +577,11 @@ INSERT INTO `thy_nav` VALUES ('7', '1', '2', '《桃花源家族》', '', 'a:2:{
 INSERT INTO `thy_nav` VALUES ('8', '1', '2', '俱乐部联盟', '', 'http://localhost/thy2.0/index.php?m=list&a=index&id=8#linkourhome', '', '1', '0', '0-2-8');
 INSERT INTO `thy_nav` VALUES ('9', '1', '2', '桃花源家族服务包', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"9\";}}', '', '1', '0', '0-2-9');
 INSERT INTO `thy_nav` VALUES ('10', '1', '2', '合作机构', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"10\";}}', '', '1', '0', '0-2-10');
-INSERT INTO `thy_nav` VALUES ('11', '1', '3', 'App介绍', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"11\";}}', '', '1', '0', '0-3-11');
-INSERT INTO `thy_nav` VALUES ('12', '1', '3', '俱乐部365', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"12\";}}', '', '1', '0', '0-3-12');
-INSERT INTO `thy_nav` VALUES ('13', '1', '3', '会员特权', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"13\";}}', '', '1', '0', '0-3-13');
-INSERT INTO `thy_nav` VALUES ('14', '1', '3', '商城', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"14\";}}', '', '1', '0', '0-3-14');
-INSERT INTO `thy_nav` VALUES ('15', '1', '3', '个人中心', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"15\";}}', '', '1', '0', '0-3-15');
+INSERT INTO `thy_nav` VALUES ('11', '1', '3', 'App介绍', '', 'http://localhost/thy2.0/index.php?m=list&a=index&id=2#app01', '', '1', '0', '0-3-11');
+INSERT INTO `thy_nav` VALUES ('12', '1', '3', '俱乐部365', '', 'http://localhost/thy2.0/index.php?m=list&a=index&id=2#app02', '', '1', '0', '0-3-12');
+INSERT INTO `thy_nav` VALUES ('13', '1', '3', '会员特权', '', 'http://localhost/thy2.0/index.php?m=list&a=index&id=2#app03', '', '1', '0', '0-3-13');
+INSERT INTO `thy_nav` VALUES ('14', '1', '3', '商城', '', 'http://localhost/thy2.0/index.php?m=list&a=index&id=2#app04', '', '1', '0', '0-3-14');
+INSERT INTO `thy_nav` VALUES ('15', '1', '3', '个人中心', '', 'http://localhost/thy2.0/index.php?m=list&a=index&id=2#app05', '', '1', '0', '0-3-15');
 INSERT INTO `thy_nav` VALUES ('16', '1', '0', '关注我们', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"3\";}}', '', '1', '0', '0-16');
 INSERT INTO `thy_nav` VALUES ('17', '1', '16', '公众号', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"16\";}}', '', '1', '0', '0-16-17');
 INSERT INTO `thy_nav` VALUES ('18', '1', '16', '微博', '', 'a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:2:\"17\";}}', '', '1', '0', '0-16-18');
@@ -706,7 +706,7 @@ CREATE TABLE `thy_posts` (
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`),
   KEY `post_date` (`post_date`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Portal文章表';
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COMMENT='Portal文章表';
 
 -- ----------------------------
 -- Records of thy_posts
@@ -716,6 +716,31 @@ INSERT INTO `thy_posts` VALUES ('2', '1', '', '', '2019-05-18 18:12:47', '<pre s
 INSERT INTO `thy_posts` VALUES ('3', '1', '', '', '2019-05-18 18:13:15', '<p>400&nbsp;&nbsp;636&nbsp;&nbsp;1228</p>', '客服热线', '400  636  1228', '1', '1', '2019-05-18 18:41:45', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190518\\/5cdfe15ab0d18.png\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('4', '1', '', '', '2019-05-18 18:16:26', '', '桃花源家族公众号', '', '1', '1', '2019-05-18 18:20:35', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190518\\/5cdfdbbc718eb.png\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('5', '1', '', '', '2019-05-18 18:21:01', '', '桃花源家族官方微博', '', '1', '1', '2019-05-18 18:29:53', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190518\\/5cdfde9ecddd4.png\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('6', '1', '', '', '2019-05-20 17:07:47', '', '俱乐部颁365精彩活动', '新西兰北岛7天休闲游', '1', '1', '2019-05-20 17:08:46', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('7', '1', '', '', '2019-05-20 17:08:48', '', '中国最具影响力', '俱乐部颁奖盛典圆满结束', '1', '1', '2019-05-20 17:08:59', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('8', '1', '', '', '2019-05-20 17:09:00', '<p>以美学赞礼生命&nbsp;&nbsp;&nbsp;&nbsp;以生命践行美学</p>', '以美学赞礼生命', '以生命践行美学', '1', '1', '2019-05-20 17:55:19', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('9', '1', '', '', '2019-05-20 17:09:25', '<pre style=\"background-color:#2a2b27;color:#c6b3ba;font-family:&#39;Consolas&#39;;font-size:10.5pt;\">1月6日桃花源家族APP正式上线</pre><p><br/></p>', '1月6日桃花源家族APP正式上线', '会员权益', '1', '1', '2019-05-20 17:45:58', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('10', '1', '', '', '2019-05-20 17:09:41', '<pre style=\"background-color:#2a2b27;color:#c6b3ba;font-family:&#39;Consolas&#39;;font-size:10.5pt;\">“《俱乐部》&amp;&nbsp;《桃花源家族》”</pre><p><br/></p>', '“《俱乐部》&amp; 《桃花源家族》”', '“《俱乐部》&amp; 《桃花源家族》”', '1', '1', '2019-05-20 17:11:20', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('11', '1', '桃花源家族·中国首席多元化聚美集群', '', '2019-05-20 17:11:22', '<p>桃花源家族·中国首席多元化聚美集群</p>', '关于我们', '商务合作', '1', '1', '2019-05-20 17:12:26', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('12', '1', '', '', '2019-05-20 17:12:27', '<p>桃花源家族特权卡</p>', '桃花源家族特权卡', '了解更多', '1', '1', '2019-05-20 17:13:31', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('13', '1', '', '', '2019-05-20 17:12:50', '', '俱乐部365精选活动/课程', '活动详情', '1', '1', '2019-05-20 17:13:14', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('14', '1', '', '', '2019-05-20 17:13:44', '<pre style=\"background-color:#2a2b27;color:#c6b3ba;font-family:&#39;宋体&#39;;font-size:10.5pt;\">俱乐部365往期活动</pre><p><br/></p>', '俱乐部365往期活动', '活动详情', '1', '1', '2019-05-20 17:14:00', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('15', '1', '', '', '2019-05-21 14:11:16', '<p>1月6日，桃花源家族退出的APP正式上线，为您带来多项特权服务的同时还有<br/>桃花源家族精彩的会员活动体验和专属课程。<br/>桃花源家族APP主要分为4个板块，俱乐部365、VIP特权、商城和个人中心。<br/>我们是创造精致生活的设计师，为您打造浸入式品质生活。</p>', '桃花源家族APP正式上线', '会员权益', '1', '1', '2019-05-21 14:13:40', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190521\\/5ce396a09e625.png\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('16', '1', '俱      乐      部', '', '2019-05-21 14:14:07', '<p>桃花源家族开放经过整合的优质内容、服务特权和商品特权，与俱乐部已有服务一起<br/>更好的满足客户需求，形成“+”服务。</p>', '桃花源家族服务包', '已有服务', '1', '1', '2019-05-21 14:26:35', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"http:\\/\\/localhost\\/thy2.0\\/data\\/upload\\/portal\\/20190521\\/5ce3978003533.png\",\"alt\":\"appnva01.png\"},{\"url\":\"http:\\/\\/localhost\\/thy2.0\\/data\\/upload\\/portal\\/20190521\\/5ce397801f01a.png\",\"alt\":\"appnva02.png\"},{\"url\":\"http:\\/\\/localhost\\/thy2.0\\/data\\/upload\\/portal\\/20190521\\/5ce3978034107.png\",\"alt\":\"appnva03.png\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('17', '1', '', '', '2019-05-21 15:18:04', '<p>THY&nbsp;&nbsp;SOCIALITES&nbsp;&nbsp;<em>PRIVILEGED</em>&nbsp;&nbsp;<em>SERVICE</em></p>', '桃花源家族会员权益', '成为会员', '1', '1', '2019-05-21 15:19:09', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('18', '1', '', '', '2019-05-21 15:19:10', '', '桃花源家族APP分为四大板块', '', '1', '1', '2019-05-21 15:20:14', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190521\\/5ce3a69606dfa.png\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190521\\/5ce3a6a74e65a.png\",\"alt\":\"appnva01.png\"},{\"url\":\"portal\\/20190521\\/5ce3a6a76d759.png\",\"alt\":\"appnva02.png\"},{\"url\":\"portal\\/20190521\\/5ce3a6a78218d.png\",\"alt\":\"appnva03.png\"},{\"url\":\"portal\\/20190521\\/5ce3a6a7960c2.png\",\"alt\":\"appnva04.png\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('19', '1', '', '', '2019-05-21 15:20:15', '<p>“我们是创造精致生活的设计师，为您打造浸入式品质生活。”</p><p>桃花源家族学院是中国首家“生活方式美学提升学院”。</p><p>以“生活美学”“生命美学”“城市美学”为主线，涵盖所有独创跨界生活方式产品，</p><p>用专业的态度探索市场，帮助国内高净值家庭重构美学定义，</p><p>打开更多元更意趣的生活灵感。</p>', '桃花源家族俱乐部365', '', '1', '1', '2019-05-21 15:40:24', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('20', '1', '', '', '2019-05-21 15:24:21', '<p>在“会员特权”版块中集合了桃花源家族</p><p>所有会员精品专享特权，</p><p>从多种层面为我们的</p><p>会员打造多样便捷的生活方式。</p>', '会员特权', '', '1', '1', '2019-05-21 15:28:08', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190521\\/5ce3a7b9d949b.png\",\"template\":\"\",\"photo\":[{\"url\":\"http:\\/\\/localhost\\/thy2.0\\/data\\/upload\\/portal\\/20190521\\/5ce3a7fce8501.png\",\"alt\":\"phone03.png\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('21', '1', 'GLOBAL 2100+HOTEL', '', '2019-05-21 15:47:08', '<p>成为会员</p>', '全球 2100+ 高端酒店度假村预定及特殊礼遇', 'PRIVILEGE COURTESY', '1', '1', '2019-05-21 16:00:19', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190521\\/5ce3ad2ebb994.png\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('22', '1', '', '', '2019-05-21 16:01:43', '<p>\n							与全球2100多家酒店和度假村合作;<br/> 享受独特的优惠和设施;<br/> 比美国运通百夫长多20%的酒店合作伙伴;<br/> 即时预订、可用性强;<br/> 保证最优惠价格。<br/></p>', '特权项目', '', '1', '1', '2019-05-21 16:02:10', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('23', '1', '', '', '2019-05-21 16:02:11', '<p>\n							双人早餐、客房升级特权;<br/> 定制的欢迎生命：例如来自相应的俱乐部的问候，或作为尊贵会员享受客房升级;<br/> 每次入住获得100美金的午餐/晚餐/水疗或设施的消费抵用券;<br/> 延迟至4点退房、高速无线网特权;<br/> 可获得相应的会员积分。<br/></p>', '酒店会员权益', '会员权益', '1', '1', '2019-05-21 16:12:58', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('24', '1', '', '', '2019-05-21 16:05:06', '', '酒店权益', '', '1', '1', '2019-05-21 16:05:30', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190521\\/5ce3b1489a77b.jpg\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('25', '1', '', '', '2019-05-21 16:06:58', '', '餐厅权益', '', '1', '1', '2019-05-21 16:07:29', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190521\\/5ce3b1bcf1cf4.jpg\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('26', '1', '', '', '2019-05-21 16:07:31', '<p>与全球100+米其林级餐厅品牌合作;<br/> 即时预订、可用性强;<br/> 全球市场持续更新中。</p>', '特权项目', '', '1', '1', '2019-05-21 16:08:13', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('27', '1', '', '', '2019-05-21 16:08:14', '<p>优先预定;<br/> 代表所属俱乐部定制迎宾礼;<br/> 免费饮料或甜点。</p>', '餐厅会员权益', '会员权益', '1', '1', '2019-05-21 16:13:08', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('28', '1', '', '', '2019-05-21 16:20:45', '<p>桃花源家族为会员提供多层次、多维度的生活服务内容。从健康管理特权到绿色饮食体验，从公务包机礼遇到私密旅行定制。多样化的特权服务让我们的会员不管是公务还是生活，都能有多一分的便捷与享受。</p>', '商城权益', '', '1', '1', '2019-05-21 16:29:44', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190521\\/5ce3b50b945ff.png\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('29', '1', '', '', '2019-05-21 16:24:02', '<p>与全球100+米其林级餐厅品牌合作;<br/> \n								即时预订、可用性强;<br/> \n								全球市场持续更新中。</p>', '个人中心特权项目', '特权项目', '1', '1', '2019-05-21 16:24:43', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('30', '1', '', '', '2019-05-21 16:24:44', '<p>\n								优先预定;<br/> \n								代表所属俱乐部定制迎宾礼;<br/> \n								免费饮料或甜点。</p>', '个人中心会员权益', '会员权益', '1', '1', '2019-05-21 16:25:09', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for `thy_role`
@@ -833,29 +858,35 @@ CREATE TABLE `thy_terms` (
   `listorder` int(5) NOT NULL DEFAULT '0' COMMENT '排序',
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`term_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类表';
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类表';
 
 -- ----------------------------
 -- Records of thy_terms
 -- ----------------------------
 INSERT INTO `thy_terms` VALUES ('1', '关于我们', '', 'article', '', '0', '0', '0-1', '', '', '', 'values', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('2', '桃花源家族APP', '', 'article', '', '0', '0', '0-2', '', '', '', 'list_masonry', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('2', '桃花源家族APP', '', 'article', '', '0', '0', '0-2', '', '', '', 'app', 'article', '0', '1');
 INSERT INTO `thy_terms` VALUES ('3', '关注我们', '', 'article', '', '0', '0', '0-3', '', '', '', 'about', 'article', '0', '1');
 INSERT INTO `thy_terms` VALUES ('4', '桃花源家族介绍', '', 'article', '', '1', '0', '0-1-4', '', '', '', 'values', 'article', '0', '1');
 INSERT INTO `thy_terms` VALUES ('5', '运营概括', '', 'article', '', '1', '0', '0-1-5', '', '', '', 'values', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('6', '《俱乐部》', '', 'article', '', '1', '0', '0-1-6', '', '', '', 'list', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('7', '《桃花源家族》', '', 'article', '', '1', '0', '0-1-7', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('6', '《俱乐部》', '', 'article', '', '1', '0', '0-1-6', '', '', '', 'magazine', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('7', '《桃花源家族》', '', 'article', '', '1', '0', '0-1-7', '', '', '', 'magazine', 'article', '0', '1');
 INSERT INTO `thy_terms` VALUES ('8', '俱乐部联盟', '', 'article', '', '1', '0', '0-1-8', '', '', '', 'cooperation', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('9', '桃花源家族服务包', '', 'article', '', '1', '0', '0-1-9', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('9', '桃花源家族服务包', '', 'article', '', '1', '0', '0-1-9', '', '', '', 'appup', 'article', '0', '1');
 INSERT INTO `thy_terms` VALUES ('10', '合作机构', '', 'article', '', '1', '0', '0-1-10', '', '', '', 'cooperation', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('11', 'App介绍', '', 'article', '', '2', '0', '0-2-11', '', '', '', 'list', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('12', '俱乐部365', '', 'article', '', '2', '0', '0-2-12', '', '', '', 'list', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('13', '会员特权', '', 'article', '', '2', '0', '0-2-13', '', '', '', 'list', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('14', '商城', '', 'article', '', '2', '0', '0-2-14', '', '', '', 'list', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('15', '个人中心', '', 'article', '', '2', '0', '0-2-15', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('11', 'App介绍', '', 'article', '', '2', '0', '0-2-11', '', '', '', 'app', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('12', '俱乐部365', '', 'article', '', '2', '0', '0-2-12', '', '', '', 'app', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('13', '会员特权', '', 'article', '', '2', '0', '0-2-13', '', '', '', 'app', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('14', '商城', '', 'article', '', '2', '0', '0-2-14', '', '', '', 'app', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('15', '个人中心', '', 'article', '', '2', '0', '0-2-15', '', '', '', 'app', 'article', '0', '1');
 INSERT INTO `thy_terms` VALUES ('16', '公众号', '', 'article', '', '3', '0', '0-3-16', '', '', '', 'about', 'article', '0', '1');
 INSERT INTO `thy_terms` VALUES ('17', '微博', '', 'article', '', '3', '0', '0-3-17', '', '', '', 'about', 'article', '0', '1');
 INSERT INTO `thy_terms` VALUES ('18', '400电话', '', 'article', '', '3', '0', '0-3-18', '', '', '', 'about', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('19', '首页内容', '', 'article', '', '0', '0', '0-19', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('20', '近期活动', '', 'article', '', '0', '0', '0-20', '', '', '', 'recentEvents', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('21', '往期活动', '', 'article', '', '0', '0', '0-21', '', '', '', 'events_series', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('22', '往期活动1', '', 'article', '', '21', '0', '0-21-22', '', '', '', 'events1', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('23', '往期活动2', '', 'article', '', '21', '0', '0-21-23', '', '', '', 'events2', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('24', '往期活动3', '', 'article', '', '21', '0', '0-21-24', '', '', '', 'events3', 'article', '0', '1');
 
 -- ----------------------------
 -- Table structure for `thy_term_relationships`
@@ -869,7 +900,7 @@ CREATE TABLE `thy_term_relationships` (
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`tid`),
   KEY `term_taxonomy_id` (`term_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表';
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表';
 
 -- ----------------------------
 -- Records of thy_term_relationships
@@ -879,6 +910,31 @@ INSERT INTO `thy_term_relationships` VALUES ('2', '2', '3', '0', '1');
 INSERT INTO `thy_term_relationships` VALUES ('3', '3', '18', '0', '1');
 INSERT INTO `thy_term_relationships` VALUES ('4', '4', '16', '0', '1');
 INSERT INTO `thy_term_relationships` VALUES ('5', '5', '17', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('6', '6', '19', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('7', '7', '19', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('8', '8', '19', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('9', '9', '19', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('10', '10', '19', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('11', '11', '19', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('12', '12', '19', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('13', '13', '19', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('14', '14', '19', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('15', '15', '9', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('16', '16', '9', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('17', '17', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('18', '18', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('19', '19', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('20', '20', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('21', '21', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('22', '22', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('23', '23', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('24', '24', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('25', '25', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('26', '26', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('27', '27', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('28', '28', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('29', '29', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('30', '30', '2', '0', '1');
 
 -- ----------------------------
 -- Table structure for `thy_users`
