@@ -16,13 +16,16 @@
 	<body>
 		<div class="wrap">
 			<tc_include file="Public:nav2" />
+			<php>
+				$servies3 = sp_sql_post(38,'');
+			</php>
 			<div class="content">
 				<div class="banner clearfix" style="background-position: top;">
 					<a class="banner_link" href="javascript:void(0);">
 						<div class="wow banner_con left_fade_in">
 							<div class="animate_con">
-								<h3>日本茶道茶艺分享会</h3>
-								<span>桃花源家族携手日本茶艺大师大薮晃子分享日式茶道</span>
+								<h3>{$servies3.post_title}</h3>
+								<span>{$servies3.post_keywords}</span>
 							</div>
 						</div>
 					</a>
@@ -31,47 +34,36 @@
 					<div class="link_events_50">
 						<div class="swiper-container swiper-container01 imglistbox" >
 							<div class="swiper-wrapper">
-						        <div class="swiper-slide event_speech01">
-								    <a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-						        </div>
-						        <div class="swiper-slide event_speech02">
-						       	 	<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-						        </div>
-						        <div class="swiper-slide event_speech03">
-						        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-						        </div>
-						        <div class="swiper-slide event_speech04">
-						        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-						        </div>
-						        <div class="swiper-slide event_speech05">
-						        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-						        </div>
-						        <div class="swiper-slide event_speech06">
-						        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-						        </div>
-						        <div class="swiper-slide event_speech07">
-						        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-						        </div>
+								<php>
+									$pp = sp_sql_post(47,'');
+									$smeta1=json_decode($pp['smeta'], true);
+								</php>
+								<volist name="smeta1['photo']" id="h">
+									<div class="swiper-slide event_speech01" style="background: url('{:sp_get_asset_upload_path($h[\'url\'])}');">
+										<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
+									</div>
+								</volist>
 						    </div>
 						    <div class="swiper-button-prev"></div>
 						    <div class="swiper-button-next"></div>
 						</div>
 						<div class="imglistmask">
-							<p>近日，“桃花源家族”联手“设计北京”共同打造“存量时代下的空间演绎”论坛，本次论坛汇聚了著名建筑师、室内设计师、产品设计师、著名艺术家及国内顶尖俱乐部创始人等重量级嘉宾，从不同领域共同探讨相关话题，破解其中困局。</p>
+							{$servies3.post_content}
+
 						</div>
 						
 					</div>
 					<div class="link_events_50 swiper-container swiper-container02">
+						<php>
+							$ppp = sp_sql_post(48,'');
+							$smeta2=json_decode($ppp['smeta'], true);
+						</php>
 						<div class="swiper-wrapper">
-					        <div class="swiper-slide event3_s01">
-							    <a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
-					        <div class="swiper-slide event3_s02">
-					       	 	<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
-					        <div class="swiper-slide event3_s03">
-					        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
+							<volist name="smeta2['photo']" id="h">
+								<div class="swiper-slide event3_s01" style="background: url('{:sp_get_asset_upload_path($h[\'url\'])}');">
+									<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
+								</div>
+							</volist>
 					    </div>
 					    <div class="swiper-button-prev"></div>
 					    <div class="swiper-button-next"></div>
@@ -81,9 +73,9 @@
 			</div>
 		</div>
 		<tc_include file="Public:footer" />
-		<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" src="lib/wow.min.js" ></script>
-		<script type="text/javascript" src="lib/swiper-4.2.6.min.js" ></script>
+		<script type="text/javascript" src="__TMPL__Public/assets/lib/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="__TMPL__Public/assets/lib/wow.min.js" ></script>
+		<script type="text/javascript" src="__TMPL__Public/assets/lib/swiper-4.2.6.min.js" ></script>
 		<script>
               new WOW().init();
               //swiper

@@ -17,21 +17,28 @@
 		<div class="wrap">
 			<tc_include file="Public:nav2" />
 			<div class="content">
+				<php>
+					$recent1 = sp_sql_post(31,'');
+					$recent2 = sp_sql_post(32,'');
+					$recent3 = sp_sql_post(33,'');
+					$recent4 = sp_sql_post(34,'');
+					$recent5 = sp_sql_post(35,'');
+				</php>
 				<div class="recentEvents_con clearfix">
 					<a class="link_events_30 rec_event01">
 						<div class="rec_conblock">
-							<span class="span_rec01">6月</span>
-							<span class="span_rec02">JUNE</span>
-							<span class="span_rec03">桃花源家族学院</span>
-							<span class="span_rec03">6月活动</span>
+							<span class="span_rec01">{$recent1.post_title}</span>
+							<span class="span_rec02">{$recent1.post_source}</span>
+							<span class="span_rec03">{$recent1.post_keywords}</span>
+							<span class="span_rec03">{$recent1.post_excerpt}</span>
 						</div>
 					</a>
 					<a class="link_events_70 rec_event02">
 						<div class="wow animate_con right_fade_in">
 							<div class="rec_conblock rec_conright01">
-								<span class="data_title">6月22日·上海·朵云轩美术馆</span>
-								<h3 class="rec_conH">艺术世界里的完美童年</h3>
-								<span class="data_title">——博洛尼亚国际插画展</span>
+								<span class="data_title">{$recent2.post_title}</span>
+								<h3 class="rec_conH">{$recent2.post_keywords}</h3>
+								<span class="data_title">{$recent2.post_excerpt}</span>
 							</div>
 						</div>
 					</a>
@@ -41,9 +48,9 @@
 					<a class="link_events_30 rec_event04">
 						<div class="wow animate_con right_fade_in">
 							<div class="rec_conblock rec_concenter">
-								<span class="data_title">6月24日·北京·央美术馆</span>
-								<h3 class="rec_conH">一场新媒体艺术的童话旅行</h3>
-								<span class="data_title">特邀日本顶尖新媒体艺术团队teamLab打造大型沉浸式互动艺术展【teamLab★未来游乐园】</span>
+								<span class="data_title">{$recent3.post_title}</span>
+								<h3 class="rec_conH">{$recent3.post_keywords}</h3>
+								<span class="data_title">{$recent3.post_excerpt}</span>
 							</div>
 						</div>
 					</a>
@@ -52,17 +59,17 @@
 					<a class="link_events_50 rec_event05">
 						<div class="wow animate_con left_fade_in">
 							<div class="rec_conblock rec_conright02">
-								<span class="data_title">6月24日·北京·长安俱乐部</span>
-								<h3 class="rec_conH">区块链应用与发展</h3>
+								<span class="data_title">{$recent4.post_title}</span>
+								<h3 class="rec_conH">{$recent4.post_excerpt}</h3>
 							</div>
 						</div>
 					</a>
 					<a class="link_events_50 rec_event06">
 						<div class="wow animate_con right_fade_in">
 							<div class="rec_conblock rec_conright01">
-								<span class="data_title">6月30日·北京·利星行奔驰汽车工厂</span>
-								<h3 class="rec_conH">未来践行家系列</h3>
-								<h3 class="rec_conH">—未来工程师</h3>
+								<span class="data_title">{$recent5.post_title}</span>
+								<h3 class="rec_conH">{$recent5.post_keywords}</h3>
+								<h3 class="rec_conH">{$recent5.post_excerpt}</h3>
 							</div>
 						</div>
 					</a>

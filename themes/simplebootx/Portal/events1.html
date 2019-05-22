@@ -14,30 +14,30 @@
 	</head>
 	<body onload="eScrolltop();">
 		<div class="wrap">
-			<tc_clude file="Public:nav" />
+			<tc_include file="Public:nav" />
 			<div class="content1">
+				<php>
+					$servies1 = sp_sql_post(36,'');
+				</php>
 				<div class="banner1 clearfix">
 					<div class="wow banner1_con left_fade_in">
 						<div class="animate_con">
-							<h3>“跨界赋能美好共生”</h3>
-							<p>由《俱乐部》杂志和桃花源家族主办的“跨界赋能 美好共生”中国最具影响力俱乐部颁奖盛典暨桃花源家族APP上线启动仪式华美落幕。《俱乐部》杂志创始人兼出品人 Amy Luan，桃花源家族总裁、《俱乐部》杂志联合出品人魏雄杰，《俱乐部》杂志主编刘岩共同邀请俱乐部界大咖、各界名流亲临现场，见证这一美好时刻。盛典上颁发了俱乐部最具影响力人物及最具影响力俱乐部等8个大奖。当晚，桃花源家族APP也正式上线，它将为高端人群带来更多会员权益以及新的生活方式。</p>
+							<h3>{$servies1.post_title}</h3>
+							{$servies1.post_content}
 						</div>
 					</div>
 				</div>
 				<div class="events_con swiper-container swiper-container01 clearfix">
+					<php>
+						$pp = sp_sql_post(45,'');
+						$smeta1=json_decode($pp['smeta'], true);
+					</php>
 					    <div class="swiper-wrapper">
-					        <div class="swiper-slide event_mb01">
-							    <a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
-					        <div class="swiper-slide event_mb02">
-					       	 	<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
-					        <div class="swiper-slide event_mb03">
-					        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
-					        <div class="swiper-slide event_mb04">
-					        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
+							<volist name="smeta1['photo']" id="h">
+								<div class="swiper-slide event_mb01" style="background: url('{:sp_get_asset_upload_path($h[\'url\'])}');">
+									<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
+								</div>
+							</volist>
 					    </div>
 					    <div class="swiper-button-prev"></div>
 					    <div class="swiper-button-next"></div>
@@ -45,15 +45,14 @@
 				<div class="events_con02 clearfix" style="position: relative;">
 					<div class="events_imglist swiper-container swiper-container02">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide link_events_33 events_bbg01"></div>
-							<div class="swiper-slide link_events_33 events_bbg02"></div>
-							<div class="swiper-slide link_events_33 events_bbg03"></div>
-							<div class="swiper-slide link_events_33 events_bbg04"></div>
-							<div class="swiper-slide link_events_33 events_bbg05"></div>
-							<div class="swiper-slide link_events_33 events_bbg06"></div>
-							<div class="swiper-slide link_events_33 events_bbg07"></div>
-							<div class="swiper-slide link_events_33 events_bbg08"></div>
-							<div class="swiper-slide link_events_33 events_bbg09"></div>
+							<php>
+								$ppp = sp_sql_post(46,'');
+								$smeta2=json_decode($ppp['smeta'], true);
+							</php>
+							<volist name="smeta2['photo']" id="hh">
+								<div class="swiper-slide link_events_33 events_bbg01" style="background: url('{:sp_get_asset_upload_path($hh[\'url\'])}');">
+								</div>
+							</volist>
 						</div>
 					</div>
 					<div class="swiper-button-prev" style="left: 8%;"></div>
@@ -61,7 +60,7 @@
 				</div>
 			</div>
 		</div>
-		<tc_clude file="Public:footer" />
+		<tc_include file="Public:footer" />
 		<script type="text/javascript" src="__TMPL__Public/assets/lib/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" src="__TMPL__Public/assets/lib/wow.min.js" ></script>
 		<script type="text/javascript" src="__TMPL__Public/assets/lib/swiper-4.2.6.min.js" ></script>

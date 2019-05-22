@@ -23,54 +23,51 @@
 					</div>
 				</div>
 				<div class="h500 clearfix">
+					<php>
+						$servies1 = sp_sql_post(36,'');
+						$servies2 = sp_sql_post(37,'');
+						$servies3 = sp_sql_post(38,'');
+					</php>
 					<div class="link_events_30">
 					   <div class="h250 event_s02">
-					   		<a class=" link_events_full01 " href="javascript:void(0)">
-								<h3 class="rec_conH1">“法式生活艺术”论坛</h3>
-								<span class="data_title1">揭示最地道的法式生活</span>
+					   		<a class=" link_events_full01 " href="{:leuu('portal/list/index',array('id'=>23))}">
+								<h3 class="rec_conH1">{$servies2.post_title}</h3>
+								<span class="data_title1">{$servies2.post_excerpt}</span>
 							</a>
 					   </div>
 						<div class="h250 event_s03">
-					   		<a class=" link_events_full01 " href="javascript:void(0)">
-								<h3 class="rec_conH1">日本茶道茶艺分享会</h3>
-							<span class="data_title1">揭示最地道的法式生活</span>
+					   		<a class=" link_events_full01 " href="{:leuu('portal/list/index',array('id'=>24))}">
+								<h3 class="rec_conH1">{$servies3.post_title}</h3>
+							<span class="data_title1">{$servies3.post_excerpt}</span>
 							</a>
 					   </div>
 					</div>
 					<div class="link_events_70 event_s04">
-						<a class="link_events_full01" href="javascript:void(0)">
-							<h1 class="titleH11">“跨界赋能&nbsp;&nbsp;&nbsp;&nbsp;美好共生”</h1>
-							<span class="data_title">中国最具影响力俱乐部颁奖盛典</span>
-							<span class="data_title">暨桃花源家族APP上线启动仪式</span>
+						<a class="link_events_full01" href="{:leuu('portal/list/index',array('id'=>22))}">
+							<h1 class="titleH11">{$servies1.post_title}</h1>
+							<span class="data_title">{$servies1.post_excerpt}</span>
+							<span class="data_title">{$servies1.post_keywords}</span>
 						</a>
 					</div>
 					
 				</div>
-				<div class="events_con swiper-container swiper-container01 clearfix">
-						<div class="swiper-wrapper">
-					        <a class="swiper-slide link_events_33 event_wq01" href="javascript:void(0)">
-						        	<div class="mask"> 
-						        		<span class="mask_con">桃花源家族携手老爷会、雏菊汇、特斯拉，共同举办“绅士的品味”论坛活动。</span> 
-						        	</div> 
-					        </a>
-					        <a class="swiper-slide link_events_33 event_wq02" href="javascript:void(0)">
-						        	<div class="mask"> 
-						        		<span class="mask_con">绅士的品格</span> 
-						        	</div> 
-					        </a>
-					        <a class="swiper-slide link_events_33 event_wq01" href="javascript:void(0)">
-						        	<div class="mask"> 
-						        		<span class="mask_con">桃花源家族×德贝尔口腔之我是小牙医。</span> 
-						        	</div> 
-					        </a>
-					        <a class="swiper-slide link_events_33 event_wq02" href="javascript:void(0)">
-						        	<div class="mask"> 
-						        		<span class="mask_con">桃花源家族携手老爷会、雏菊汇、特斯拉，共同举办“绅士的品味”论坛活动。</span> 
-						        	</div> 
-					        </a>
-					    </div>
-					    <div class="swiper-button-prev"></div>
-					    <div class="swiper-button-next"></div>
+				<div class="swiper-container events_con swiper-container01 clearfix">
+					<php>
+						$wq = sp_sql_post(39,'');
+						$smeta=json_decode($wq['smeta'], true);
+					</php>
+					<div class="swiper-wrapper">
+						<volist name="smeta['photo']" id="photo">
+							<a class="swiper-slide link_events_33" href="javascript:void(0)">
+								<div class="mask">
+									<img src="{:sp_get_asset_upload_path($photo['url'])}"/>
+									<span class="mask_con">{$photo['alt']}</span>
+								</div>
+							</a>
+						</volist>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
 				</div>
 				
 			</div>
@@ -93,6 +90,8 @@
 				      prevEl: '.swiper-button-prev',
 				    },
 				});
+              var imgh= $(".mask img").height();
+              $(".events_con").css("height", imgh);
         </script>
 	</body>
 

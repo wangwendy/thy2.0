@@ -159,7 +159,7 @@
 }
 /*活动模版三   左侧swiper*/
 .event_speech01{
-	background: url(../images/events/events3/speech01.jpg);
+	/*background: url(../images/events/events3/speech01.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
@@ -194,7 +194,7 @@
 	background-position: center;
 }
 .event3_s01{
-	background: url(../images/events/events3/events3_21.jpg);
+	/*background: url(../images/events/events3/events3_21.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
@@ -241,7 +241,7 @@
 }
 /*活动模版1 events1*/
 .event_mb01{
-	background: url(../images/events/events1/events1_11.jpg);
+	/*background: url(../images/events/events1/events1_11.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
@@ -367,7 +367,7 @@
     cursor: pointer;
 }
 .events_bbg01{
-	background: url(../images/events/events1/events1_21.jpg);
+	/*background: url(../images/events/events1/events1_21.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
@@ -438,7 +438,9 @@
     padding: 10px 20px;
     line-height: 24px;
     font-size: 14px;
-    width: 100%;
+    width:calc(100% - 40px);
+    width: -moz-calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
     color: #FFFFFF;
 	background: rgba(0,0,0,.6);
 }

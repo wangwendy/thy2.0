@@ -1,0 +1,147 @@
+.content{
+	margin-top: 90px;
+}
+.banner{
+	display: block;
+	width: 100%;
+    margin-bottom: 50px;
+}
+.banner_lcon{
+	float: left;
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+}
+.banner_lcon .spantitle{
+	font-size: 22px;
+	line-height: 30px;
+}
+.banner_lcon .spantitle2{
+	font-size: 22px;
+	line-height: 30px;
+	font-family: myfont02;
+}
+.banner_right{
+	float:left;
+	width: 75%;
+}
+.joinM{
+	border: 1px solid #000000;
+	margin-top: 40px;
+	display: inline-block;
+	cursor: pointer;
+}
+.joinM a{
+	background: #000000;
+	color: #FFFFFF;
+	padding: 5px 10px;
+	margin: 3px;
+	display: block;
+}
+.joinM:hover{
+	border: 1px solid #7c98be;
+}
+.joinM a:hover{
+	background: #7c98be;
+	color: #FFFFFF;
+}
+.magaz{
+	width: 100%;
+	height: auto;
+	display: block;
+	position: relative;
+}
+.magaz img{
+	width: 100%;
+	display: block;
+	z-index: 0;
+}
+.magaz_con{
+	width: 90%;
+	height: 100%;
+	color: #FFFFFF;
+	margin: 0 auto;
+}
+.magazinecon{
+	position: absolute;
+	color: #000000;
+	text-align: left;
+}
+.magazinecon .titleh2{
+	display: block;
+	font-size: 30px;
+	line-height: 40px;
+	font-family: myfont02;
+}
+.magazinecon span{
+	display: block;
+	font-size: 18px;
+	line-height: 30px;
+	font-family: myfont02;
+	width: 500px;
+}
+.magazinecon p{
+	display: block;
+	margin-top: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    width: 500px;
+}
+
+.magaz01 .magazinecon{
+	bottom: 30px;
+	left: 7%;
+}
+.magaz02 .magazinecon{
+	top: 20px;
+	right: 10%;
+}
+/*swiper*/
+.swiper-button-prev{
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent; 
+	border-right: 15px solid #FFFFFF; 
+	border-bottom: 10px solid transparent; 
+}
+.swiper-button-next{
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent; 
+	border-left: 15px solid #FFFFFF;
+	border-bottom: 10px solid transparent; 
+}
+.swiper-slide img{
+	width: 100%;
+}
+.works_mag01{
+	width: 260px;
+	height: 500px;
+	background: url(../images/magazine/magazine01.jpg);
+	background-size:cover;
+	background-position: center;
+}
+.works_mag02{
+	width: 260px;
+	height: 500px;
+	background: url(../images/magazine/magazine02.jpg);
+	background-size:cover;
+	background-position: center;
+}
+.works_mag03{
+	width: 260px;
+	height: 500px;
+	background: url(../images/magazine/magazine03.jpg);
+	background-size:cover;
+	background-position: center;
+}
+.works_mag04{
+	width: 260px;
+	height: 500px;
+	background: url(../images/magazine/magazine04.jpg);
+	background-size:cover;
+	background-position: center;
+}
+

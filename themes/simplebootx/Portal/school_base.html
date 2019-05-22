@@ -19,97 +19,76 @@
 				<div class="banner clearfix">
 					<div class="banner_left">
 						<div class="wow ban_left_con left_fade_in">
-							<img src="__TMPL__Public/assets/images/school_base/bannerlogo.png" />
-							<span>基于左手大海，右手群山，自然于一掌的物理空间，</span>
-							<span>坚守土地中生长的一种人文与自然相平衡的秩序，</span>
-							<span>选择了多元文化领域的主题合作，</span>
-							<span>旨在通过文明融合再造，构建起当代人文坐标中的海上盛景。</span>
-							<span class="span_last">桃花源家族之香水湾1号美学小镇&nbsp;&nbsp;&nbsp;&nbsp;与美好共生。</span>
+							<php>
+								$xz = sp_sql_post(40,'');
+								$smeta=json_decode($xz['smeta'],true);
+							</php>
+							<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" />
+
+							<span>{$xz.post_content}</span>
+							<span class="span_last">{$xz.post_title}</span>
 						</div>
 					</div>
 					<div class="banner_right">
+						<php>
+							$xz1 = sp_sql_post(41,'');
+							$smeta1=json_decode($xz1['smeta'],true);
+						</php>
 						<div class="ban_right_con ">
-							<img src="__TMPL__Public/assets/images/school_base/base02.png" style="width: 100%;" />
-							<span>桃花源家族学院基地—香水湾1号落地主题</span>
+							<img src="{:sp_get_asset_upload_path($smeta1['thumb'])}" style="width: 100%;" />
+							<span>{$xz1.post_title}</span>
 						</div>
 					</div>
 				</div>
 				<div class="base_con clearfix">
 					<div class="base_left_con swiper-container swiper-container-left clearfix">
+
 						<div class="swiper-wrapper">
-							<div class="swiper-slide base_left01">
-								<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-								<em class="fontlable">实景拍摄</em>
-							</div>
-							<div class="swiper-slide base_left02">
-								<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-								<em class="fontlable">实景拍摄</em>
-							</div>
-							<div class="swiper-slide base_left03">
-								<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-								<em class="fontlable">实景拍摄</em>
-							</div>
-							<div class="swiper-slide base_left04">
-								<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-								<em class="fontlable">实景拍摄</em>
-							</div>
+							<php>
+								$home = sp_sql_post(42,'');
+								$smeta1=json_decode($home['smeta'], true);
+							</php>
+							<volist name="smeta1['photo']" id="h">
+								<div class="swiper-slide base_left01" style="background: url('{:sp_get_asset_upload_path($h[\'url\'])}');">
+									<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
+									<em class="fontlable">{$home.post_title}</em>
+								</div>
+							</volist>
 						</div>
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
 					</div>
 					<div class="base_right_con swiper-container swiper-container-right clearfix">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide base_right01">
-								<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-								<em class="fontlable">实景拍摄</em>
-							</div>
-							<div class="swiper-slide base_right02">
-								<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-								<em class="fontlable">实景拍摄</em>
-							</div>
-							<div class="swiper-slide base_right03">
-								<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-								<em class="fontlable">实景拍摄</em>
-							</div>
-							<div class="swiper-slide base_right04">
-								<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-								<em class="fontlable">实景拍摄</em>
-							</div>
-							
+							<php>
+								$right = sp_sql_post(43,'');
+								$smeta2=json_decode($right['smeta'], true);
+							</php>
+							<volist name="smeta2['photo']" id="r">
+								<div class="swiper-slide base_right01" style="background: url('{:sp_get_asset_upload_path($r[\'url\'])}');">
+									<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
+									<em class="fontlable">{$right.post_title}</em>
+								</div>
+							</volist>
 						</div>
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
 					</div>
 				</div>
 				<div class="base_hotel clearfix">
-					<span class="base_title">桃花源家族学院基地合作酒店</span>
-					<p>甄选全国最佳设计度假酒店，遗世独立的隐居酒店，文旅地产项目，城市顶级俱乐部作为会员活动及课程基地，既能体验地域性自然风貌、感受灿烂瑰丽的文化也能享受到私密奢华的社交空间（文旅地产、度假酒店、城市俱乐部）。</p>
+					<php>
+						$hotel = sp_sql_post(44,'');
+						$smeta3=json_decode($hotel['smeta'], true);
+					</php>
+					<span class="base_title">{$hotel.post_title}</span>
+					{$hotel.post_content}
 				    <div class="img_scroll swiper-container" id="amy">
-				    	    <div class="swiper-wrapper">
-							<div class="swiper-slide hotel01 ">
-								<span class="hotel_title">香水湾一号</span>
-							</div>
-							<div class="swiper-slide hotel02">
-								<span class="hotel_title">峨眉山蓝光安纳塔拉酒店</span>
-							</div>
-							<div class="swiper-slide hotel03">
-								<span class="hotel_title">花间堂</span>
-							</div>
-							<div class="swiper-slide hotel04">
-								<span class="hotel_title">阿丽拉阳溯堂舍</span>
-							</div>
-							<div class="swiper-slide hotel05">
-								<span class="hotel_title">香樟华苹温泉度假别墅</span>
-							</div>
-							<div class="swiper-slide hotel06">
-								<span class="hotel_title">富春山居</span>
-							</div>
-							<div class="swiper-slide hotel07">
-								<span class="hotel_title">隐世集团</span>
-							</div>
-							<div class="swiper-slide hotel08">
-								<span class="hotel_title">六善酒店</span>
-							</div>
+				    	<div class="swiper-wrapper">
+							<volist name="smeta3['photo']" id="hot">
+								<div class="swiper-slide hotel01 " style="background: url('{:sp_get_asset_upload_path($hot[\'url\'])}');">
+									<span class="hotel_title">{$hot['alt']}</span>
+								</div>
+							</volist>
 						</div>
 				    </div>
 				</div>

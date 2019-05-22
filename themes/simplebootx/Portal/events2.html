@@ -17,39 +17,27 @@
 		<div class="wrap">
 			<tc_include file="Public:nav2" />
 			<div class="content" />
+			<php>
+				$servies2 = sp_sql_post(37,'');
+				$smeta1=json_decode($servies2['smeta'], true);
+			</php>
 				<div class="events_con clearfix">
 					<a class="link_events_50 event_btop01" href="javascript:void(0)">
 						<div class="wow animate_con left_fade_in event_active">
-							<h3>桃花源家族“法式生活艺术”论坛</h3>
-							<h4>揭示最地道的法式生活</h4>
-							<p>近日，在充满法式风情的MOISSONNIER展厅里，桃花源家族携手蓝色早晨家居，以及来自法国的Liquides Imaginaires幻想之水，带来一场法式香氛三重奏。在场的嘉宾出其不意和迷人的“法国味儿”来了个邂逅。 
-								Liquides Imaginaires的每一款香水都是一个特别的故事。不同系列的“三部曲（Trilogy）”中，有dry woods干木质调香气的“Fortis堡垒之殇”，文静而决绝；有混合了夏天海滩香气的“Dom rosa粉色之彼”，
-								清甜而迷醉；也有挥散着被河水浸泡的木船之气“Bello rabelo拉贝洛之勇”， 晦涩而沉稳。
-                            </p>
+							<h3>{$servies2.post_keywords}{$servies2.post_title}</h3>
+							<h4>{$servies2.post_excerpt}</h4>
+							{$servies2.post_content}
 						</div>
 					</a>
 					<a class="link_events_50 event_btop02" href="javascript:void(0)"></a>
 				</div>
 				<div class="events_con swiper-container clearfix" style="height: 350px;">
 					    <div class="swiper-wrapper">
-					        <div class="swiper-slide event_mday01">
-							    <a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
-					        <div class="swiper-slide event_mday02">
-					       	 	<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
-					        <div class="swiper-slide event_mday03">
-					        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
-					        <div class="swiper-slide event_mday04">
-					        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
-					        <div class="swiper-slide event_mday05">
-					        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
-					        <div class="swiper-slide event_mday06">
-					        		<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
-					        </div>
+							<volist name="smeta1['photo']" id="h">
+								<div class="swiper-slide event_mday01" style="background: url('{:sp_get_asset_upload_path($h[\'url\'])}');">
+									<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
+								</div>
+							</volist>
 					    </div>
 					    <div class="swiper-button-prev"></div>
 					    <div class="swiper-button-next"></div>

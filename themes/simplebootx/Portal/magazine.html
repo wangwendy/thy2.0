@@ -16,38 +16,30 @@
 		<div class="wrap">
 			<tc_include file="Public:nav2" />
 			<div class="content">
+				<php>
+					$magazine = sp_sql_post(57,'');
+					$smeta=json_decode($magazine['smeta'],true);
+					$magazine2 = sp_sql_post(58,'');
+					$smeta2=json_decode($magazine2['smeta'],true);
+					$magazine3 = sp_sql_post(59,'');
+					$smeta3=json_decode($magazine3['smeta'],true);
+				</php>
 				<div class="banner clearfix">
 					<div class="banner_lcon">
-						<span class="spantitle">《俱乐部》</span>
-						<span class="spantitle">《桃花源家族》</span>
-						<span class="spantitle2">杂志订阅</span>
+						<span class="spantitle">{$magazine.post_excerpt}</span>
+						<span class="spantitle">{$magazine.post_keywords}</span>
+						<span class="spantitle2">{$magazine.post_title}</span>
 						<div class="joinM">
-					    		<a href="app.html">了解更多</a>
+					    		<a href="{:leuu('portal/list/index',array('id'=>2))}">了解更多</a>
 					    </div>
 					</div>
 					<div class="banner_right swiper-container">
 						<div class="swiper-wrapper">
-					        <div class="swiper-slide">
-					        		<img src="__TMPL__Public/assets/images/magazine/magazine01.jpg" />
-					        </div>
-					        <div class="swiper-slide">
-					        		<img src="__TMPL__Public/assets/images/magazine/magazine02.jpg" />
-					        </div>
-					        <div class="swiper-slide">
-					        		<img src="__TMPL__Public/assets/images/magazine/magazine03.jpg" />
-					        </div>
-					        <div class="swiper-slide">
-					        		<img src="__TMPL__Public/assets/images/magazine/magazine04.jpg" />
-					        </div>
-					        <div class="swiper-slide">
-					        		<img src="__TMPL__Public/assets/images/magazine/magazine01.jpg" />
-					        </div>
-					        <div class="swiper-slide">
-					        		<img src="__TMPL__Public/assets/images/magazine/magazine03.jpg" />
-					        </div>
-					        <div class="swiper-slide">
-					        		<img src="__TMPL__Public/assets/images/magazine/magazine04.jpg" />
-					        </div>
+							<volist name="smeta['photo']" id="h">
+								<div class="swiper-slide">
+									<img src="{:sp_get_asset_upload_path($h['url'])}" />
+								</div>
+							</volist>
 					    </div>
 					    <div class="swiper-button-prev"></div>
 					    <div class="swiper-button-next"></div>
@@ -55,27 +47,19 @@
 				</div>
 				<div class="magaz magaz01 clearfix">
 					<div class="magazinecon">
-						<h2 class="titleh2">《俱乐部》</h2>
-						<span>"始终以报道中国的俱乐部生活为主要方向。"</span>
-						<p>《俱乐部》杂志聚焦俱乐部、社群领域与公众生活之间的关系.
-						2017年做了大量的运动竞技类俱乐部、俱乐部创始人、管理者的采访。杂志报道分成两个方向，
-						总结各个俱乐部在管理、运营上的方法，传播每个俱乐部的核心理念与其倡导的运动生活方式。
-						2018年，杂志将深耕B2B2C模式，搭建媒体、行业与用户之间良性关系。
-                        </p>
+						<h2 class="titleh2">{$magazine2.post_title}</h2>
+						<span>{$magazine2.post_excerpt}</span>
+						{$magazine2.post_content}
 				    </div>
-					<img src="__TMPL__Public/assets/images/magazine/bg01.jpg" />
+					<img src="{:sp_get_asset_upload_path($smeta2['thumb'])}" />
 				</div>
 				<div class="magaz magaz02 clearfix">
 					<div class="magazinecon">
-						<h2 class="titleh2">《桃花源家族》</h2>
-						<span>关注高端人群的生活方式。时尚，更尊崇文化；物质，更蕴含精神；享受，更强调责任。</span>
-						<p>《桃花源家族》杂志创刊于2017年，坚持只呈现——最鲜活的大牌趋势，
-							最生动的精英访谈，最深入的幕后故事，最新颖的人文话题，最独特的别册专刊。
-							《桃花源家族》全方位出击，  以优雅的文字，触动内心最柔软的部分； 
-							 以优美的图片，勾勒世间最美好的向往；  以优质的活动，聚拢圈层最真诚的交流。
-                        </p>
+						<h2 class="titleh2">{$magazine3.post_title}</h2>
+						<span>{$magazine3.post_excerpt}</span>
+						{$magazine3.post_content}
 				    </div>
-					<img src="__TMPL__Public/assets/images/magazine/bg02.jpg" />
+					<img src="{:sp_get_asset_upload_path($smeta3['thumb'])}" />
 				</div>
 			</div> 
 		</div>

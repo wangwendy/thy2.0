@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-05-21 16:36:25
+Date: 2019-05-22 17:18:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -706,7 +706,7 @@ CREATE TABLE `thy_posts` (
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`),
   KEY `post_date` (`post_date`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COMMENT='Portal文章表';
+) ENGINE=MyISAM AUTO_INCREMENT=62 DEFAULT CHARSET=utf8 COMMENT='Portal文章表';
 
 -- ----------------------------
 -- Records of thy_posts
@@ -741,6 +741,37 @@ INSERT INTO `thy_posts` VALUES ('27', '1', '', '', '2019-05-21 16:08:14', '<p>�
 INSERT INTO `thy_posts` VALUES ('28', '1', '', '', '2019-05-21 16:20:45', '<p>桃花源家族为会员提供多层次、多维度的生活服务内容。从健康管理特权到绿色饮食体验，从公务包机礼遇到私密旅行定制。多样化的特权服务让我们的会员不管是公务还是生活，都能有多一分的便捷与享受。</p>', '商城权益', '', '1', '1', '2019-05-21 16:29:44', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190521\\/5ce3b50b945ff.png\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('29', '1', '', '', '2019-05-21 16:24:02', '<p>与全球100+米其林级餐厅品牌合作;<br/> \n								即时预订、可用性强;<br/> \n								全球市场持续更新中。</p>', '个人中心特权项目', '特权项目', '1', '1', '2019-05-21 16:24:43', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('30', '1', '', '', '2019-05-21 16:24:44', '<p>\n								优先预定;<br/> \n								代表所属俱乐部定制迎宾礼;<br/> \n								免费饮料或甜点。</p>', '个人中心会员权益', '会员权益', '1', '1', '2019-05-21 16:25:09', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('31', '1', '桃花源家族学院', 'JUNE', '2019-05-21 17:44:08', '', '6月', '6月活动', '1', '1', '2019-05-21 17:44:47', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('32', '1', '艺术世界里的完美童年', '', '2019-05-21 17:44:49', '', '6月22日·上海·朵云轩美术馆', '——博洛尼亚国际插画展', '1', '1', '2019-05-21 17:45:22', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('33', '1', '一场新媒体艺术的童话旅行', '', '2019-05-21 17:45:23', '', '6月24日·北京·央美术馆', '特邀日本顶尖新媒体艺术团队teamLab打造大型沉浸式互动艺术展【teamLab★未来游乐园】', '1', '1', '2019-05-21 17:50:06', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('34', '1', '', '', '2019-05-21 17:45:48', '', '6月24日·北京·长安俱乐部', '区块链应用与发展', '1', '1', '2019-05-21 17:46:06', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('35', '1', '未来践行家系列', '', '2019-05-21 17:46:08', '', '6月30日·北京·利星行奔驰汽车工厂', '—未来工程师', '1', '1', '2019-05-21 17:46:27', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('36', '1', '暨桃花源家族APP上线启动仪式', '', '2019-05-21 17:56:34', '<p>由《俱乐部》杂志和桃花源家族主办的“跨界赋能 美好共生”中国最具影响力俱乐部颁奖盛典暨桃花源家族APP上线启动仪式华美落幕。《俱乐部》杂志创始人兼出品人 Amy Luan，桃花源家族总裁、《俱乐部》杂志联合出品人魏雄杰，《俱乐部》杂志主编刘岩共同邀请俱乐部界大咖、各界名流亲临现场，见证这一美好时刻。盛典上颁发了俱乐部最具影响力人物及最具影响力俱乐部等8个大奖。当晚，桃花源家族APP也正式上线，它将为高端人群带来更多会员权益以及新的生活方式。</p>', '“跨界赋能        美好共生”', '中国最具影响力俱乐部颁奖盛典', '1', '1', '2019-05-22 09:34:23', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('37', '1', '桃花源家族', '', '2019-05-21 17:57:22', '<p>近日，在充满法式风情的MOISSONNIER展厅里，桃花源家族携手蓝色早晨家居，以及来自法国的Liquides Imaginaires幻想之水，带来一场法式香氛三重奏。在场的嘉宾出其不意和迷人的“法国味儿”来了个邂逅。 \n								Liquides Imaginaires的每一款香水都是一个特别的故事。不同系列的“三部曲（Trilogy）”中，有dry woods干木质调香气的“Fortis堡垒之殇”，文静而决绝；有混合了夏天海滩香气的“Dom rosa粉色之彼”，\n								清甜而迷醉；也有挥散着被河水浸泡的木船之气“Bello rabelo拉贝洛之勇”， 晦涩而沉稳。</p>', '“法式生活艺术”论坛', '揭示最地道的法式生活', '1', '1', '2019-05-22 15:39:23', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce4fca319776.jpeg\",\"alt\":\"WechatIMG28.jpeg\"},{\"url\":\"portal\\/20190522\\/5ce4fca332f0d.jpeg\",\"alt\":\"WechatIMG29.jpeg\"},{\"url\":\"portal\\/20190522\\/5ce4fca34e865.jpeg\",\"alt\":\"WechatIMG30.jpeg\"},{\"url\":\"portal\\/20190522\\/5ce4fca364995.jpeg\",\"alt\":\"WechatIMG31.jpeg\"},{\"url\":\"portal\\/20190522\\/5ce4fca37cf74.jpeg\",\"alt\":\"WechatIMG32.jpeg\"},{\"url\":\"portal\\/20190522\\/5ce4fca391edf.jpeg\",\"alt\":\"WechatIMG33.jpeg\"},{\"url\":\"portal\\/20190522\\/5ce4fca3a766c.jpeg\",\"alt\":\"WechatIMG34.jpeg\"},{\"url\":\"portal\\/20190522\\/5ce4fca3bc26c.jpeg\",\"alt\":\"WechatIMG35.jpeg\"},{\"url\":\"portal\\/20190522\\/5ce4fca3d2757.jpeg\",\"alt\":\"WechatIMG36.jpeg\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('38', '1', '桃花源家族携手日本茶艺大师大薮晃子分享日式茶道', '', '2019-05-21 17:57:36', '<p>近日，“桃花源家族”联手“设计北京”共同打造“存量时代下的空间演绎”论坛，本次论坛汇聚了著名建筑师、室内设计师、产品设计师、著名艺术家及国内顶尖俱乐部创始人等重量级嘉宾，从不同领域共同探讨相关话题，破解其中困局。</p>', '日本茶道茶艺分享会', '揭示最地道的法式生活', '1', '1', '2019-05-22 14:36:24', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('39', '1', '', '', '2019-05-22 14:42:47', '', '往期活动内容', '', '1', '1', '2019-05-22 14:44:22', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce4ef988bf3c.jpg\",\"alt\":\"\\u6843\\u82b1\\u6e90\\u5bb6\\u65cf\\u643a\\u624b\\u8001\\u7237\\u4f1a\\u3001\\u96cf\\u83ca\\u6c47\\u3001\\u7279\\u65af\\u62c9\\uff0c\\u5171\\u540c\\u4e3e\\u529e\\u201c\\u7ec5\\u58eb\\u7684\\u54c1\\u5473\\u201d\\u8bba\\u575b\\u6d3b\\u52a8\\u3002\"},{\"url\":\"portal\\/20190522\\/5ce4ef98a8cbb.jpg\",\"alt\":\"\\u7ec5\\u58eb\\u7684\\u54c1\\u683c\"},{\"url\":\"portal\\/20190522\\/5ce4efb494b0f.jpg\",\"alt\":\"\\u6843\\u82b1\\u6e90\\u5bb6\\u65cf\\u00d7\\u5fb7\\u8d1d\\u5c14\\u53e3\\u8154\\u4e4b\\u6211\\u662f\\u5c0f\\u7259\\u533b\\u3002\"},{\"url\":\"portal\\/20190522\\/5ce4efb4abcf7.jpg\",\"alt\":\"\\u6843\\u82b1\\u6e90\\u5bb6\\u65cf\\u643a\\u624b\\u8001\\u7237\\u4f1a\\u3001\\u96cf\\u83ca\\u6c47\\u3001\\u7279\\u65af\\u62c9\\uff0c\\u5171\\u540c\\u4e3e\\u529e\\u201c\\u7ec5\\u58eb\\u7684\\u54c1\\u5473\\u201d\\u8bba\\u575b\\u6d3b\\u52a8\\u3002\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('40', '1', '基于左手大海，右手群山，自然于一掌的物理空间，', '坚守土地中生长的一种人文与自然相平衡的秩序，', '2019-05-22 14:51:09', '<p style=\"margin: 0px;\">基于左手大海，右手群山，自然于一掌的物理空间，</p><p style=\"margin: 0px;\">坚守土地中生长的一种人文与自然相平衡的秩序，</p><p style=\"margin: 0px;\">选择了多元文化领域的主题合作，</p><p style=\"margin: 0px;\">旨在通过文明融合再造，构建起当代人文坐标中的海上盛景。</p>', '桃花源家族之香水湾1号美学小镇        与美好共生。', '选择了多元文化领域的主题合作，', '1', '1', '2019-05-22 15:12:27', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190522\\/5ce4f1b3be5ce.png\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('41', '1', '', '', '2019-05-22 15:09:19', '', '桃花源家族学院基地—香水湾1号落地主题', '', '1', '1', '2019-05-22 15:09:46', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190522\\/5ce4f5b6b0be8.png\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('42', '1', '', '', '2019-05-22 15:19:31', '', '实景拍摄', '', '1', '1', '2019-05-22 15:20:59', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce4f8492a91b.jpg\",\"alt\":\"school_base01.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4f8494aaf5.jpg\",\"alt\":\"school_base02.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4f8496214c.jpg\",\"alt\":\"school_base03.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4f849775e5.jpg\",\"alt\":\"school_base04.jpg\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('43', '1', '', '', '2019-05-22 15:21:01', '', '实景拍摄', '', '1', '1', '2019-05-22 15:21:20', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce4f86936ccb.jpg\",\"alt\":\"school_base05.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4f86957dbd.jpg\",\"alt\":\"school_base06.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4f8696edce.jpg\",\"alt\":\"school_base07.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4f8698468b.jpg\",\"alt\":\"school_base08.jpg\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('44', '1', '', '', '2019-05-22 15:22:53', '<p>甄选全国最佳设计度假酒店，遗世独立的隐居酒店，文旅地产项目，城市顶级俱乐部作为会员活动及课程基地，既能体验地域性自然风貌、感受灿烂瑰丽的文化也能享受到私密奢华的社交空间（文旅地产、度假酒店、城市俱乐部）。</p>', '桃花源家族学院基地合作酒店', '', '1', '1', '2019-05-22 15:24:23', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce4f901bbd42.jpg\",\"alt\":\"\\u9999\\u6c34\\u6e7e\\u4e00\\u53f7\"},{\"url\":\"portal\\/20190522\\/5ce4f901dc315.jpg\",\"alt\":\"\\u5ce8\\u7709\\u5c71\\u84dd\\u5149\\u5b89\\u7eb3\\u5854\\u62c9\\u9152\\u5e97\"},{\"url\":\"portal\\/20190522\\/5ce4f901f247f.jpg\",\"alt\":\"\\u82b1\\u95f4\\u5802\"},{\"url\":\"portal\\/20190522\\/5ce4f90216d02.jpg\",\"alt\":\"\\u963f\\u4e3d\\u62c9\\u9633\\u6eaf\\u5802\\u820d\"},{\"url\":\"portal\\/20190522\\/5ce4f9022e591.jpg\",\"alt\":\"\\u9999\\u6a1f\\u534e\\u82f9\\u6e29\\u6cc9\\u5ea6\\u5047\\u522b\\u5885\"},{\"url\":\"portal\\/20190522\\/5ce4f90247ec6.jpg\",\"alt\":\"\\u5bcc\\u6625\\u5c71\\u5c45\"},{\"url\":\"portal\\/20190522\\/5ce4f9025e529.jpg\",\"alt\":\"\\u9690\\u4e16\\u96c6\\u56e2\"},{\"url\":\"portal\\/20190522\\/5ce4f9027426d.jpg\",\"alt\":\"\\u516d\\u5584\\u9152\\u5e97\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('45', '1', '', '', '2019-05-22 15:41:07', '', '跨界赋能 美好共生图片1', '', '1', '1', '2019-05-22 15:42:56', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce4fd7903fe0.jpg\",\"alt\":\"events1_11.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4fd791ccd8.jpg\",\"alt\":\"events1_12.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4fd793265d.jpg\",\"alt\":\"events1_13.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4fd7948e8b.jpg\",\"alt\":\"events1_14.jpg\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('46', '1', '', '', '2019-05-22 15:42:58', '', '跨界赋能 美好共生图片2', '', '1', '1', '2019-05-22 15:44:29', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce4fddb5feb1.jpg\",\"alt\":\"events1_21.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4fddb7d473.jpg\",\"alt\":\"events1_22.jpg\"},{\"url\":\"portal\\/20190522\\/5ce4fddb9215c.jpg\",\"alt\":\"events1_23.jpg\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('47', '1', '', '', '2019-05-22 16:00:24', '', '日本茶道茶艺分享会图片1', '', '1', '1', '2019-05-22 16:00:48', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce501adc41d9.jpg\",\"alt\":\"speech01.jpg\"},{\"url\":\"portal\\/20190522\\/5ce501addb02a.jpg\",\"alt\":\"speech02.jpg\"},{\"url\":\"portal\\/20190522\\/5ce501adf11e3.jpg\",\"alt\":\"speech03.jpg\"},{\"url\":\"portal\\/20190522\\/5ce501ae170ec.jpg\",\"alt\":\"speech04.jpg\"},{\"url\":\"portal\\/20190522\\/5ce501ae2edff.jpg\",\"alt\":\"speech05.jpg\"},{\"url\":\"portal\\/20190522\\/5ce501ae55d85.jpg\",\"alt\":\"speech06.jpg\"},{\"url\":\"portal\\/20190522\\/5ce501ae6af6e.jpg\",\"alt\":\"speech07.jpg\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('48', '1', '', '', '2019-05-22 16:00:49', '', '日本茶道茶艺分享会图片2', '', '1', '1', '2019-05-22 16:01:07', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce501c0d204b.jpg\",\"alt\":\"events3_21.jpg\"},{\"url\":\"portal\\/20190522\\/5ce501c0e9e4e.jpg\",\"alt\":\"events3_22.jpg\"},{\"url\":\"portal\\/20190522\\/5ce501c10af87.jpg\",\"alt\":\"events3_23.jpg\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('49', '1', '', '', '2019-05-22 16:30:37', '<p>桃花源家族于2017年在北京正式成立企业总部，依托远东控股集团购房客户资源，全国俱乐部联盟客户资源，自营的公开媒体资源，为中国超过十万高净值人群提供综合个性化服务。对于至美生活的理想，是总在我们心中闪烁的明灯，于是成为一家专注于文旅项目、文化内容运营及高净值人群服务的独立公司。</p><p>远东控股集团专注于超高端旅游地产开发，旗下著名项目包括海南省地标凤凰岛，被媒体评为中国10大豪宅的海南香水湾1号及享誉盛名的海南五指山国家雨林综合型旅游景区。</p><p>以全国俱乐部联盟平台为主线，同时以精准的俱乐部人群为基础，共享内容、共享空间、共享客户，打造“俱乐部联盟”，为个体俱乐部提供更丰富的服务、客户的内容以及客户来源。以多元聚美文化集群展开文旅地产招商及运营，高端楼盘资产管理和运营，《俱乐部》和《桃花源家族》媒体矩阵，艺术博览会运营，高端人群培训，高端活动策划，会员制的服务运营。\n						桃花源对于人类来说，不仅仅是一纸文学作品，而是前人创造的一种生活方式，一种山水布景，一种人生哲学，一处心灵归属。我们便是要造一座精神与物质交融的桃花源，为每个人插上一对能飞往理想国的翅膀。</p>', '桃花源家族介绍', '桃花源，是一束贯穿古今的梦之光，人们一直都在寻找心灵栖息地，而这也正是桃花源家族对于至美生活的理想。', '1', '1', '2019-05-22 16:31:07', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('50', '1', '种', '媒体介质，杂志、', '2019-05-22 16:34:32', '', '3', '电视频道、新媒体矩阵', '1', '1', '2019-05-22 16:35:48', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('51', '1', '家', '', '2019-05-22 16:35:49', '', '156', '平均活动场次350场', '1', '1', '2019-05-22 16:36:02', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('52', '1', '种', '', '2019-05-22 16:36:03', '', '30', '多领域聚合文化课程', '1', '1', '2019-05-22 16:36:21', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('53', '1', '家', '', '2019-05-22 16:36:22', '', '28', '聚美群落基地酒店', '1', '1', '2019-05-22 16:36:34', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('54', '1', '家', '', '2019-05-22 16:36:35', '', '2100', '全球五星级及超五星级酒店特权服务', '1', '1', '2019-05-22 16:36:46', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('55', '1', '家', '', '2019-05-22 16:36:47', '', '120', '中国高端餐厅预定礼遇服务', '1', '1', '2019-05-22 16:37:01', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('56', '1', '场', '', '2019-05-22 16:41:59', '', '350', '平均活动场次350场', '1', '1', '2019-05-22 16:42:25', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('57', '1', '《桃花源家族》', '', '2019-05-22 16:49:02', '', '杂志订阅', '《俱乐部》', '1', '1', '2019-05-22 16:49:44', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce50d268a216.jpg\",\"alt\":\"magazine01.jpg\"},{\"url\":\"portal\\/20190522\\/5ce50d26a1840.jpg\",\"alt\":\"magazine02.jpg\"},{\"url\":\"portal\\/20190522\\/5ce50d26bd021.jpg\",\"alt\":\"magazine03.jpg\"},{\"url\":\"portal\\/20190522\\/5ce50d26d3271.jpg\",\"alt\":\"magazine04.jpg\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('58', '1', '', '', '2019-05-22 16:54:09', '<p>《俱乐部》杂志聚焦俱乐部、社群领域与公众生活之间的关系.\n						2017年做了大量的运动竞技类俱乐部、俱乐部创始人、管理者的采访。杂志报道分成两个方向，\n						总结各个俱乐部在管理、运营上的方法，传播每个俱乐部的核心理念与其倡导的运动生活方式。\n						2018年，杂志将深耕B2B2C模式，搭建媒体、行业与用户之间良性关系。</p>', '《俱乐部》', '&quot;始终以报道中国的俱乐部生活为主要方向。&quot;', '1', '1', '2019-05-22 16:55:32', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190522\\/5ce50e729e3af.jpg\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('59', '1', '', '', '2019-05-22 16:54:27', '<p>《桃花源家族》杂志创刊于2017年，坚持只呈现——最鲜活的大牌趋势，\n							最生动的精英访谈，最深入的幕后故事，最新颖的人文话题，最独特的别册专刊。\n							《桃花源家族》全方位出击， &nbsp;以优雅的文字，触动内心最柔软的部分； \n							 以优美的图片，勾勒世间最美好的向往； &nbsp;以优质的活动，聚拢圈层最真诚的交流。</p>', '《桃花源家族》', '关注高端人群的生活方式。时尚，更尊崇文化；物质，更蕴含精神；享受，更强调责任。', '1', '1', '2019-05-22 16:55:55', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190522\\/5ce50e8cc0b99.jpg\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('60', '1', '', '', '2019-05-22 17:07:39', '', '桃花源家族认证合作机构', '', '1', '1', '2019-05-22 17:09:20', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190522\\/5ce51187efa92.jpg\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('61', '1', '', '', '2019-05-22 17:08:28', '<p>以《俱乐部》杂志为媒介，将俱乐部创始人汇聚一堂，搭建高品质资源交流平台，深度联系与合作，共同促进俱乐部行业进一步发展。</p>', '桃花源家族俱乐部联盟', '', '1', '1', '2019-05-22 17:09:13', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce511b755214.jpg\",\"alt\":\"home1.jpg\"},{\"url\":\"portal\\/20190522\\/5ce511b76d721.jpg\",\"alt\":\"home2.jpg\"},{\"url\":\"portal\\/20190522\\/5ce511b78a29a.jpg\",\"alt\":\"home3.jpg\"},{\"url\":\"portal\\/20190522\\/5ce511b7a0378.jpg\",\"alt\":\"home4.jpg\"}]}', '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for `thy_role`
@@ -858,7 +889,7 @@ CREATE TABLE `thy_terms` (
   `listorder` int(5) NOT NULL DEFAULT '0' COMMENT '排序',
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`term_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类表';
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类表';
 
 -- ----------------------------
 -- Records of thy_terms
@@ -884,9 +915,10 @@ INSERT INTO `thy_terms` VALUES ('18', '400电话', '', 'article', '', '3', '0', 
 INSERT INTO `thy_terms` VALUES ('19', '首页内容', '', 'article', '', '0', '0', '0-19', '', '', '', 'list', 'article', '0', '1');
 INSERT INTO `thy_terms` VALUES ('20', '近期活动', '', 'article', '', '0', '0', '0-20', '', '', '', 'recentEvents', 'article', '0', '1');
 INSERT INTO `thy_terms` VALUES ('21', '往期活动', '', 'article', '', '0', '0', '0-21', '', '', '', 'events_series', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('22', '往期活动1', '', 'article', '', '21', '0', '0-21-22', '', '', '', 'events1', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('23', '往期活动2', '', 'article', '', '21', '0', '0-21-23', '', '', '', 'events2', 'article', '0', '1');
-INSERT INTO `thy_terms` VALUES ('24', '往期活动3', '', 'article', '', '21', '0', '0-21-24', '', '', '', 'events3', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('22', '“跨界赋能        美好共生”', '', 'article', '', '21', '0', '0-21-22', '', '', '', 'events1', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('23', '“法式生活艺术”论坛', '', 'article', '', '21', '0', '0-21-23', '', '', '', 'events2', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('24', '日本茶道茶艺分享会', '', 'article', '', '21', '0', '0-21-24', '', '', '', 'events3', 'article', '0', '1');
+INSERT INTO `thy_terms` VALUES ('25', '活动基地', '', 'article', '', '0', '0', '0-25', '', '', '', 'school_base', 'article', '0', '1');
 
 -- ----------------------------
 -- Table structure for `thy_term_relationships`
@@ -900,7 +932,7 @@ CREATE TABLE `thy_term_relationships` (
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`tid`),
   KEY `term_taxonomy_id` (`term_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表';
+) ENGINE=MyISAM AUTO_INCREMENT=63 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表';
 
 -- ----------------------------
 -- Records of thy_term_relationships
@@ -935,6 +967,37 @@ INSERT INTO `thy_term_relationships` VALUES ('27', '27', '2', '0', '1');
 INSERT INTO `thy_term_relationships` VALUES ('28', '28', '2', '0', '1');
 INSERT INTO `thy_term_relationships` VALUES ('29', '29', '2', '0', '1');
 INSERT INTO `thy_term_relationships` VALUES ('30', '30', '2', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('31', '31', '20', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('32', '32', '20', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('33', '33', '20', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('34', '34', '20', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('35', '35', '20', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('36', '36', '22', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('37', '37', '23', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('38', '38', '24', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('39', '39', '21', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('40', '40', '25', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('41', '41', '25', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('42', '42', '25', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('43', '43', '25', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('44', '44', '25', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('45', '45', '22', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('46', '46', '22', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('47', '47', '24', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('48', '48', '24', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('49', '49', '4', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('50', '50', '5', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('51', '51', '5', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('52', '52', '5', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('53', '53', '5', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('54', '54', '5', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('55', '55', '5', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('56', '56', '5', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('57', '57', '6', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('58', '58', '6', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('59', '59', '7', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('62', '60', '10', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('61', '61', '8', '0', '1');
 
 -- ----------------------------
 -- Table structure for `thy_users`

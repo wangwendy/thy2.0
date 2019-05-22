@@ -16,20 +16,26 @@
 	<body>
 		<div class="wrap">
 			<tc_include file="Public:nav2" />
+			<php>
+				$values = sp_sql_post(49,'');
+				$gk1 = sp_sql_post(50,'');
+				$gk2 = sp_sql_post(51,'');
+				$gk3 = sp_sql_post(52,'');
+				$gk4 = sp_sql_post(53,'');
+				$gk5 = sp_sql_post(54,'');
+				$gk6 = sp_sql_post(55,'');
+				$gk7 = sp_sql_post(56,'');
+			</php>
 			<div class="content">
 				<div class="banner clearfix">
 					<div class="wow banner_lcon right_fade_in">
-						<span  id='values_v01'>桃花源，是一束贯穿古今的梦之光，人们一直都在寻找心灵栖息地，而这也正是桃花源家族对于至美生活的理想。</span>
+						<span  id='values_v01'>{$values.post_excerpt}</span>
 					</div>
 				</div>
 				<div class="v_con clearfix" id='values_v01'>
 					<div class="histroy_left">
-						<h1>桃花源家族介绍</h1>
-						<p>桃花源家族于2017年在北京正式成立企业总部，依托远东控股集团购房客户资源，全国俱乐部联盟客户资源，自营的公开媒体资源，为中国超过十万高净值人群提供综合个性化服务。对于至美生活的理想，是总在我们心中闪烁的明灯，于是成为一家专注于文旅项目、文化内容运营及高净值人群服务的独立公司。</p>
-						<p>远东控股集团专注于超高端旅游地产开发，旗下著名项目包括海南省地标凤凰岛，被媒体评为中国10大豪宅的海南香水湾1号及享誉盛名的海南五指山国家雨林综合型旅游景区。</p>
-					    <p>以全国俱乐部联盟平台为主线，同时以精准的俱乐部人群为基础，共享内容、共享空间、共享客户，打造“俱乐部联盟”，为个体俱乐部提供更丰富的服务、客户的内容以及客户来源。以多元聚美文化集群展开文旅地产招商及运营，高端楼盘资产管理和运营，《俱乐部》和《桃花源家族》媒体矩阵，艺术博览会运营，高端人群培训，高端活动策划，会员制的服务运营。
-						桃花源对于人类来说，不仅仅是一纸文学作品，而是前人创造的一种生活方式，一种山水布景，一种人生哲学，一处心灵归属。我们便是要造一座精神与物质交融的桃花源，为每个人插上一对能飞往理想国的翅膀。
-                        </p>
+						<h1>{$values.post_title}</h1>
+						{$values.post_content}
 					</div>
 					<div class="histroy_right"></div>
 				</div>
@@ -37,34 +43,34 @@
 					<h1>桃花源家族关键运营概括</h1>
 					<div class="datalist clearfix">
 						<div class="datacon">
-							<span class="num" style="font-size: 55px;">3<em>种</em></span>
-							<span class="explain">媒体介质，杂志、<br/>电视频道、新媒体矩阵</span>
+							<span class="num" style="font-size: 55px;">{$gk1.post_title}<em>{$gk1.post_keywords}</em></span>
+							<span class="explain">{$gk1.post_source}<br/>{$gk1.post_excerpt}</span>
 						</div>
 						<div class="datacon">
-							<span class="num">156<em>家</em></span>
-							<span class="explain">主题俱乐部合作</span>
+							<span class="num">{$gk2.post_title}<em>{$gk2.post_keywords}</em></span>
+							<span class="explain">{$gk1.post_excerpt}</span>
 						</div>
 						<div class="datacon">
-							<span class="num">350<em>场</em></span>
-							<span class="explain">平均活动场次350场</span>
+							<span class="num">{$gk7.post_title}<em>{$gk7.post_keywords}</em></span>
+							<span class="explain">{$gk7.post_excerpt}</span>
 						</div>
 						<div class="datacon">
-							<span class="num">30<em>种</em></span>
-							<span class="explain">多领域聚合文化课程</span>
+							<span class="num">{$gk3.post_title}<em>{$gk3.post_keywords}</em></span>
+							<span class="explain">{$gk3.post_excerpt}</span>
 						</div>
 						<div class="datacon">
-							<span class="num">28<em>家</em></span>
-							<span class="explain">聚美群落基地酒店</span>
+							<span class="num">{$gk4.post_title}<em>{$gk4.post_keywords}</em></span>
+							<span class="explain">{$gk4.post_excerpt}</span>
 						</div>
 					</div>
 					<div class="datalist clearfix" style="width: 50%;">
 						<div class="datacon">
-							<span class="num">2100<em>家</em></span>
-							<span class="explain">全球五星级及超五星级酒店特权服务</span>
+							<span class="num">{$gk5.post_title}<em>{$gk5.post_keywords}</em></span>
+							<span class="explain">{$gk5.post_excerpt}</span>
 						</div>
 						<div class="datacon">
-							<span class="num">120<em>家</em></span>
-							<span class="explain">中国高端餐厅预定礼遇服务</span>
+							<span class="num">{$gk6.post_title}<em>{$gk6.post_keywords}</em></span>
+							<span class="explain">{$gk6.post_excerpt}</span>
 						</div>
 					</div>
 				</div>

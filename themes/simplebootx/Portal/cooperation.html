@@ -17,29 +17,30 @@
 		<div class="wrap">
 			<tc_include file="Public:nav2" />
 			<div class="content">
+				<php>
+					$jg = sp_sql_post(60,'');
+					$smeta=json_decode($jg['smeta'], true);
+				</php>
 				<div class="v_con clearfix" style="position: relative;">
-					<h1>桃花源家族认证合作机构</h1>
-					<img src="__TMPL__Public/assets/images/cooperation/cooperation_logo.jpg" />
+					<h1>{$jg.post_title}</h1>
+					<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" />
 					<div id="linkourhome"></div>
 				</div>
+				<php>
+					$jg2 = sp_sql_post(61,'');
+					$smeta2=json_decode($jg2['smeta'], true);
+				</php>
 				<div class="v_con02 clearfix">
-					<h1>桃花源家族俱乐部联盟</h1>
-					<p>以《俱乐部》杂志为媒介，将俱乐部创始人汇聚一堂，搭建高品质资源交流平台，深度联系与合作，共同促进俱乐部行业进一步发展。</p>
+					<h1>{$jg2.post_title}</h1>
+					{$jg2.post_content}
 					<div class="img_scroll swiper-container">
 						<!--<div class="img_scroll swiper-container" id="amy">-->
-				    	    <div class="swiper-wrapper">
-							<div class="swiper-slide" style="width:670px!important;">
-								<img src="__TMPL__Public/assets/images/cooperation/home1.jpg" />
-							</div>
-							<div class="swiper-slide"style="width: 670px!important;">
-								<img src="__TMPL__Public/assets/images/cooperation/home2.jpg" />
-							</div>
-							<div class="swiper-slide"style="width: 670px!important;">
-								<img src="__TMPL__Public/assets/images/cooperation/home3.jpg" />
-							</div>
-							<div class="swiper-slide" style="width: 670px!important;">
-								<img src="__TMPL__Public/assets/images/cooperation/home4.jpg" />
-							</div>
+				    	<div class="swiper-wrapper">
+							<volist name="smeta2['photo']" id="h">
+								<div class="swiper-slide" style="width:670px!important;">
+									<img src="{:sp_get_asset_upload_path($h[\'url\'])}" />
+								</div>
+							</volist>
 						</div>
 					</div>
 				</div>
