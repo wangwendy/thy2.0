@@ -39,7 +39,8 @@
 									$smeta1=json_decode($pp['smeta'], true);
 								</php>
 								<volist name="smeta1['photo']" id="h">
-									<div class="swiper-slide event_speech01" style="background: url('{:sp_get_asset_upload_path($h[\'url\'])}');">
+									<div class="swiper-slide event_speech01" style="background: url('{:sp_get_asset_upload_path($h[\'url\'])}');background-size: cover;
+	background-position: center;">
 										<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
 									</div>
 								</volist>
@@ -60,7 +61,8 @@
 						</php>
 						<div class="swiper-wrapper">
 							<volist name="smeta2['photo']" id="h">
-								<div class="swiper-slide event3_s01" style="background: url('{:sp_get_asset_upload_path($h[\'url\'])}');">
+								<div class="swiper-slide event3_s01" style="background: url('{:sp_get_asset_upload_path($h[\'url\'])}');background-size: cover;
+	background-position: center;">
 									<a class="link_events_full" href="javascript:void(0)" title="eventspeech"></a>
 								</div>
 							</volist>

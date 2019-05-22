@@ -50,7 +50,8 @@
 								$smeta2=json_decode($ppp['smeta'], true);
 							</php>
 							<volist name="smeta2['photo']" id="hh">
-								<div class="swiper-slide link_events_33 events_bbg01" style="background: url('{:sp_get_asset_upload_path($hh[\'url\'])}');">
+								<div class="swiper-slide link_events_33 events_bbg01" style="background: url('{:sp_get_asset_upload_path($hh[\'url\'])}');background-size: cover;
+	background-position: center;">
 								</div>
 							</volist>
 						</div>
