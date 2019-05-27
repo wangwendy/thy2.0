@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-05-22 17:18:18
+Date: 2019-05-27 15:13:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -706,7 +706,7 @@ CREATE TABLE `thy_posts` (
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`),
   KEY `post_date` (`post_date`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=62 DEFAULT CHARSET=utf8 COMMENT='Portal文章表';
+) ENGINE=MyISAM AUTO_INCREMENT=63 DEFAULT CHARSET=utf8 COMMENT='Portal文章表';
 
 -- ----------------------------
 -- Records of thy_posts
@@ -719,7 +719,7 @@ INSERT INTO `thy_posts` VALUES ('5', '1', '', '', '2019-05-18 18:21:01', '', '�
 INSERT INTO `thy_posts` VALUES ('6', '1', '', '', '2019-05-20 17:07:47', '', '俱乐部颁365精彩活动', '新西兰北岛7天休闲游', '1', '1', '2019-05-20 17:08:46', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('7', '1', '', '', '2019-05-20 17:08:48', '', '中国最具影响力', '俱乐部颁奖盛典圆满结束', '1', '1', '2019-05-20 17:08:59', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('8', '1', '', '', '2019-05-20 17:09:00', '<p>以美学赞礼生命&nbsp;&nbsp;&nbsp;&nbsp;以生命践行美学</p>', '以美学赞礼生命', '以生命践行美学', '1', '1', '2019-05-20 17:55:19', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
-INSERT INTO `thy_posts` VALUES ('9', '1', '', '', '2019-05-20 17:09:25', '<pre style=\"background-color:#2a2b27;color:#c6b3ba;font-family:&#39;Consolas&#39;;font-size:10.5pt;\">1月6日桃花源家族APP正式上线</pre><p><br/></p>', '1月6日桃花源家族APP正式上线', '会员权益', '1', '1', '2019-05-20 17:45:58', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('9', '1', '', '', '2019-05-20 17:09:25', '<pre style=\"background-color:#2a2b27;color:#c6b3ba;font-family:&#39;Consolas&#39;;font-size:10.5pt;\">1月6日桃花源家族APP正式上线</pre><p><br/></p>', '桃花源家族APP正式上线', '会员权益', '1', '1', '2019-05-27 14:55:00', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('10', '1', '', '', '2019-05-20 17:09:41', '<pre style=\"background-color:#2a2b27;color:#c6b3ba;font-family:&#39;Consolas&#39;;font-size:10.5pt;\">“《俱乐部》&amp;&nbsp;《桃花源家族》”</pre><p><br/></p>', '“《俱乐部》&amp; 《桃花源家族》”', '“《俱乐部》&amp; 《桃花源家族》”', '1', '1', '2019-05-20 17:11:20', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('11', '1', '桃花源家族·中国首席多元化聚美集群', '', '2019-05-20 17:11:22', '<p>桃花源家族·中国首席多元化聚美集群</p>', '关于我们', '商务合作', '1', '1', '2019-05-20 17:12:26', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('12', '1', '', '', '2019-05-20 17:12:27', '<p>桃花源家族特权卡</p>', '桃花源家族特权卡', '了解更多', '1', '1', '2019-05-20 17:13:31', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
@@ -772,6 +772,7 @@ INSERT INTO `thy_posts` VALUES ('58', '1', '', '', '2019-05-22 16:54:09', '<p>�
 INSERT INTO `thy_posts` VALUES ('59', '1', '', '', '2019-05-22 16:54:27', '<p>《桃花源家族》杂志创刊于2017年，坚持只呈现——最鲜活的大牌趋势，\n							最生动的精英访谈，最深入的幕后故事，最新颖的人文话题，最独特的别册专刊。\n							《桃花源家族》全方位出击， &nbsp;以优雅的文字，触动内心最柔软的部分； \n							 以优美的图片，勾勒世间最美好的向往； &nbsp;以优质的活动，聚拢圈层最真诚的交流。</p>', '《桃花源家族》', '关注高端人群的生活方式。时尚，更尊崇文化；物质，更蕴含精神；享受，更强调责任。', '1', '1', '2019-05-22 16:55:55', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190522\\/5ce50e8cc0b99.jpg\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('60', '1', '', '', '2019-05-22 17:07:39', '', '桃花源家族认证合作机构', '', '1', '1', '2019-05-22 17:09:20', null, '0', '1', '', '0', '{\"thumb\":\"portal\\/20190522\\/5ce51187efa92.jpg\",\"template\":\"\"}', '0', '0', '0', '0');
 INSERT INTO `thy_posts` VALUES ('61', '1', '', '', '2019-05-22 17:08:28', '<p>以《俱乐部》杂志为媒介，将俱乐部创始人汇聚一堂，搭建高品质资源交流平台，深度联系与合作，共同促进俱乐部行业进一步发展。</p>', '桃花源家族俱乐部联盟', '', '1', '1', '2019-05-22 17:09:13', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20190522\\/5ce511b755214.jpg\",\"alt\":\"home1.jpg\"},{\"url\":\"portal\\/20190522\\/5ce511b76d721.jpg\",\"alt\":\"home2.jpg\"},{\"url\":\"portal\\/20190522\\/5ce511b78a29a.jpg\",\"alt\":\"home3.jpg\"},{\"url\":\"portal\\/20190522\\/5ce511b7a0378.jpg\",\"alt\":\"home4.jpg\"}]}', '0', '0', '0', '0');
+INSERT INTO `thy_posts` VALUES ('62', '1', '全球', '', '2019-05-27 15:01:08', '', '米其林及高端餐厅预定', '1300+', '1', '1', '2019-05-27 15:01:35', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for `thy_role`
@@ -932,7 +933,7 @@ CREATE TABLE `thy_term_relationships` (
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`tid`),
   KEY `term_taxonomy_id` (`term_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=63 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表';
+) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表';
 
 -- ----------------------------
 -- Records of thy_term_relationships
@@ -998,6 +999,7 @@ INSERT INTO `thy_term_relationships` VALUES ('58', '58', '6', '0', '1');
 INSERT INTO `thy_term_relationships` VALUES ('59', '59', '7', '0', '1');
 INSERT INTO `thy_term_relationships` VALUES ('62', '60', '10', '0', '1');
 INSERT INTO `thy_term_relationships` VALUES ('61', '61', '8', '0', '1');
+INSERT INTO `thy_term_relationships` VALUES ('63', '62', '2', '0', '1');
 
 -- ----------------------------
 -- Table structure for `thy_users`
@@ -1031,7 +1033,7 @@ CREATE TABLE `thy_users` (
 -- ----------------------------
 -- Records of thy_users
 -- ----------------------------
-INSERT INTO `thy_users` VALUES ('1', 'admin', '###ae1da85ebe5d0e175e3cfd5c550d6fc6', 'admin', 'yuehuiwang@yeah.net', '', null, '0', '2000-01-01', null, '0.0.0.0', '2019-05-18 18:03:29', '2019-05-17 03:41:59', '', '1', '0', '1', '0', '');
+INSERT INTO `thy_users` VALUES ('1', 'admin', '###ae1da85ebe5d0e175e3cfd5c550d6fc6', 'admin', 'yuehuiwang@yeah.net', '', null, '0', '2000-01-01', null, '0.0.0.0', '2019-05-27 14:53:51', '2019-05-17 03:41:59', '', '1', '0', '1', '0', '');
 
 -- ----------------------------
 -- Table structure for `thy_user_favorites`
