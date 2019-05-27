@@ -47,7 +47,7 @@
 					{$app3.post_content}
                     <div class="btncon">
                     		<div class="joinMember02">
-						    	<a href="{:leuu('portal/list/index',array('id'=>20))}">精选活动/课程</a>
+						    	<a href="{:leuu('portal/list/index',array('id'=>20))}">精选活动</a>
 						</div>
 						<div class="joinMember02" style="margin-left: 50px;">
 						    	<a href="{:leuu('portal/list/index',array('id'=>21))}">往期活动</a>
@@ -91,6 +91,7 @@
 					$smeta9 = json_decode($app9['smeta'], true);
 					$app10 = sp_sql_post(26,'');
 					$app11 = sp_sql_post(27,'');
+					$app12 = sp_sql_post(62,'');
 				</php>
 				<div class="member_con02 clearfix">
 					<div class="member_con02_left">
@@ -130,7 +131,7 @@
 					</div>
 				</div>
 				<div class="appcon_05 clearfix">
-					<span>全球<em class="num">1300</em> 1300+米其林及高端餐厅预定</span>
+					<span>{$app12.post_keywords}<em class="num">{$app12.post_excerpt}</em> {$app12.post_title}</span>
 				</div>
 				<php>
 					$app12 = sp_sql_post(28,'');
