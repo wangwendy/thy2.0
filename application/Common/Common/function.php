@@ -879,13 +879,18 @@ function sp_get_asset_upload_path($file,$style=''){
 	}else if(strpos($file,"/")===0){
 		return $file;
 	}else{
-	    $filepath=C("TMPL_PARSE_STRING.__UPLOAD__").$file;
-		if(C('FILE_UPLOAD_TYPE')=='Local'){
-	        if(strpos($filepath,"http")!==0){
-	            $filepath=sp_get_host().$filepath;
-	        }
-		}
-		
+        /*$filepath='/data/upload/'.$file;
+        if(C('FILE_UPLOAD_TYPE')=='Local'){
+            if(strpos($filepath,"http")!==0){
+                $filepath='http://www.thyclub.com'.$filepath;
+            }
+        }*/
+        $filepath=C("TMPL_PARSE_STRING.__UPLOAD__").$file;
+        if(C('FILE_UPLOAD_TYPE')=='Local'){
+            if(strpos($filepath,"http")!==0){
+                $filepath=sp_get_host().$filepath;
+            }
+        }
 		if(C('FILE_UPLOAD_TYPE')=='Qiniu'){
 		    $storage_setting=sp_get_cmf_settings('storage');
 		    $qiniu_setting=$storage_setting['Qiniu']['setting'];
