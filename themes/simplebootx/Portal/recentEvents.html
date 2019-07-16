@@ -20,56 +20,67 @@
 				<php>
 					$recent1 = sp_sql_post(31,'');
 					$recent2 = sp_sql_post(32,'');
+					$smeta1=json_decode($recent2['smeta'], true);
 					$recent3 = sp_sql_post(33,'');
+					$smeta2=json_decode($recent3['smeta'], true);
 					$recent4 = sp_sql_post(34,'');
+					$smeta3=json_decode($recent4['smeta'], true);
 					$recent5 = sp_sql_post(35,'');
+					$smeta4=json_decode($recent5['smeta'], true);
+					$recent6 = sp_sql_post(63,'');
+					$smeta5=json_decode($recent6['smeta'], true);
 				</php>
 				<div class="recentEvents_con clearfix">
 					<a class="link_events_30 rec_event01">
-						<div class="rec_conblock">
-							<span class="span_rec01">{$recent1.post_source}</span>
-							<span class="span_rec02">{$recent1.post_title}</span>
-							<span class="span_rec03">{$recent1.post_keywords}</span>
-							<span class="span_rec03">{$recent1.post_excerpt}</span>
+						<div class="rec_conblock1">
+							<span class="span_rec03">{$recent1.post_title}</span>
+							<span class="span_rec01">{$recent1.post_keywords}</span>
 						</div>
 					</a>
-					<a class="link_events_70 rec_event02">
+					<a class="link_events_70 rec_event02" style="background: url('{:sp_get_asset_upload_path($smeta1[\'thumb\'])}')">
 						<div class="wow animate_con right_fade_in">
-							<div class="rec_conblock rec_conright01">
+							<div class="rec_conblock rec_conright02">
 								<span class="data_title">{$recent2.post_title}</span>
 								<h3 class="rec_conH">{$recent2.post_keywords}</h3>
-								<span class="data_title">{$recent2.post_excerpt}</span>
+								<!--<span class="data_title">{$recent2.post_excerpt}</span>-->
 							</div>
 						</div>
 					</a>
 				</div>
 				<div class="recentEvents_con clearfix">
-					<a class="link_events_70 rec_event03"></a>
-					<a class="link_events_30 rec_event04">
+					<a class="link_events_70 rec_event03" style="background: url('{:sp_get_asset_upload_path($smeta5[\'thumb\'])}')">
+						<div class="wow animate_con left_fade_in">
+							<div class="rec_conblock rec_conright03">
+								<span class="data_title">{$recent6.post_title}</span>
+								<h3 class="rec_conH">{$recent6.post_excerpt}</h3>
+							</div>
+						</div>
+					</a>
+					<a class="link_events_30 rec_event04" style="background: url('{:sp_get_asset_upload_path($smeta2[\'thumb\'])}')">
 						<div class="wow animate_con right_fade_in">
-							<div class="rec_conblock rec_concenter">
+							<div class="rec_conblock rec_conright03">
 								<span class="data_title">{$recent3.post_title}</span>
 								<h3 class="rec_conH">{$recent3.post_keywords}</h3>
-								<span class="data_title">{$recent3.post_excerpt}</span>
+								<!--<span class="data_title">{$recent3.post_excerpt}</span>-->
 							</div>
 						</div>
 					</a>
 				</div>
 				<div class="recentEvents_con clearfix">
-					<a class="link_events_50 rec_event05">
+					<a class="link_events_50 rec_event05" style="background: url('{:sp_get_asset_upload_path($smeta3[\'thumb\'])}')">
 						<div class="wow animate_con left_fade_in">
-							<div class="rec_conblock rec_conright02">
+							<div class="rec_conblock rec_conright03">
 								<span class="data_title">{$recent4.post_title}</span>
 								<h3 class="rec_conH">{$recent4.post_excerpt}</h3>
 							</div>
 						</div>
 					</a>
-					<a class="link_events_50 rec_event06">
+					<a class="link_events_50 rec_event06" style="background: url('{:sp_get_asset_upload_path($smeta4[\'thumb\'])}')">
 						<div class="wow animate_con right_fade_in">
 							<div class="rec_conblock rec_conright01">
 								<span class="data_title">{$recent5.post_title}</span>
 								<h3 class="rec_conH">{$recent5.post_keywords}</h3>
-								<h3 class="rec_conH">{$recent5.post_excerpt}</h3>
+								<!--<h3 class="rec_conH">{$recent5.post_excerpt}</h3>-->
 							</div>
 						</div>
 					</a>

@@ -693,28 +693,28 @@
 	color: #FFFFFF;
 }
 .rec_event02{
-	background: url(../images/events/recentEvents/rec_event01.jpg);
+	/*background: url(../images/events/recentEvents/rec_event01.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
 .rec_event03{
-	background: url(../images/events/recentEvents/rec_event02.jpg);
+	/*background: url(../images/events/recentEvents/rec_event02.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
 .rec_event04{
-	background: url(../images/events/recentEvents/rec_event03.jpg);
+	/*background: url(../images/events/recentEvents/rec_event03.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
 .rec_event05{
-	background: url(../images/events/recentEvents/rec_event04.jpg);
+	/*background: url(../images/events/recentEvents/rec_event04.jpg);*/
 	background-size: cover;
 	background-position: center;
 	cursor: pointer;
 }
 .rec_event06{
-	background: url(../images/events/recentEvents/rec_event05.jpg);
+	/*background: url(../images/events/recentEvents/rec_event05.jpg);*/
 	background-size: cover;
 	background-position: center;
 	cursor: pointer;
@@ -723,31 +723,36 @@
 	position: absolute;
 	bottom: 50px;
 }
+.rec_conblock1{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 .span_rec01{
 	display: block;
-    text-align: right;
-    padding-right: 50px;
-    line-height: 40px;
-    font-size: 30px;
-    font-family: myfont02;
+	text-align:left;
+	padding-left: 50px;
+	line-height: 40px;
+	font-size: 30px;
+	font-family: myfont02;
 }
 .span_rec02{
 	display: block;
-    text-align: right;
-    padding-right: 50px;
-    line-height: 120px;
-    font-size: 90px;
-    font-family: myfont02;
-    font-weight: bold;
+	text-align: right;
+	padding-right: 50px;
+	line-height: 120px;
+	font-size: 90px;
+	font-family: myfont02;
+	font-weight: bold;
 }
 .span_rec03{
 	display: block;
-    line-height: 48px;
-    font-size: 40px;
-    font-family: myfont02;
-    width: 280px;
-    margin-right: 50px;
-    float: right;
+	line-height: 48px;
+	font-size: 40px;
+	font-family: myfont02;
+	text-align:left;
+	padding-left: 50px;
 }
 .data_title{
 	display: block;
@@ -783,6 +788,10 @@
 }
 .rec_conright01{
 	right: 80px;
+	text-align: right!important;
+}
+.rec_conright03{
+	left: 50px;
 }
 .rec_conright02{
 	left: 50%;
