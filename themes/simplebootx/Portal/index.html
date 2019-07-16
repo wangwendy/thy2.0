@@ -18,31 +18,39 @@
 			<tc_include file="Public:nav" />
 			<php>
 				$banner1 = sp_sql_post(6,'');
+				$smeta1=json_decode($banner1['smeta'], true);
 				$banner2 = sp_sql_post(7,'');
+				$smeta2=json_decode($banner2['smeta'], true);
 				$banner3 = sp_sql_post(8,'');
+				$smeta3=json_decode($banner3['smeta'], true);
 				$app = sp_sql_post(9,'');
+				$smeta4=json_decode($app['smeta'], true);
 				$magazine = sp_sql_post(10,'');
+				$smeta5=json_decode($magazine['smeta'], true);
 				$about = sp_sql_post(11,'');
+				$smeta6=json_decode($about['smeta'], true);
 				$tqk = sp_sql_post(12,'');
+				$smeta7=json_decode($tqk['smeta'], true);
 				$class = sp_sql_post(13,'');
+				$smeta8=json_decode($class['smeta'], true);
 				$review = sp_sql_post(14,'');
 			</php>
 			<div class="content">
 				<div class="var_con h600 swiper-container clearfix">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide vcon_bg01-1">
+						<div class="swiper-slide vcon_bg01-1" style="background: url('{:sp_get_asset_upload_path($smeta1[\'thumb\'])}')">
 							<div class="wow tab_animation1">
 								<span>{$banner1.post_title}</span>
 								<span>{$banner1.post_excerpt}</span>
 							</div>
 						</div>
-						<div class="swiper-slide vcon_bg01-2">
+						<div class="swiper-slide vcon_bg01-2" style="background: url('{:sp_get_asset_upload_path($smeta2[\'thumb\'])}')">
 							<div class="wow tab_animation2">
 								<span>{$banner2.post_title}</span>
 								<span>{$banner2.post_excerpt}</span>
 							</div>
 						</div>
-						<div class="swiper-slide vcon_bg01-3">
+						<div class="swiper-slide vcon_bg01-3" style="background: url('{:sp_get_asset_upload_path($smeta3[\'thumb\'])}')">
 							<div class="wow tab_animation">
 								{$banner3.post_content}
 							</div>
@@ -50,7 +58,7 @@
 					</div>
 					<div class="swiper-pagination swiper-pagination-white"></div>
 				</div>
-				<div class="var_con h500 vcon_bg03 clearfix">
+				<div class="var_con h500 vcon_bg03 clearfix" style="background: url('{:sp_get_asset_upload_path($smeta4[\'thumb\'])}')">
 					<div class="wow vc021_rcon right_fade_in">
 						<div class="vc021_rcon_50">
 							<span class="span_ltitle_cw" style="display: block;">{$app.post_title}</span>
@@ -61,12 +69,12 @@
 					</div>
 				</div>
 				<div class="var_con h500 clearfix">
-					<div class="vc02_left">
+					<div class="vc02_left" style="background: url('{:sp_get_asset_upload_path($smeta5[\'thumb\'])}')">
 						<a class="wow left_fade_in" href="{:leuu('portal/list/index',array('id'=>6))}">
 							{$magazine.post_title}
 						</a>
 					</div>
-					<div class="vc02_right">
+					<div class="vc02_right" style="background: url('{:sp_get_asset_upload_path($smeta6[\'thumb\'])}')">
 						<div class="wow vc02_rcon right_fade_in">
 							<span class="span_title cu" onclick="javascript:window.location.href='values.html'">{$about.post_title}</span>
 							<span class="span_ltitle">{$about.post_keywords}</span>
@@ -76,7 +84,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="var_con h500 vcon_bg05 clearfix">
+				<div class="var_con h500 vcon_bg05 clearfix" style="background: url('{:sp_get_asset_upload_path($smeta7[\'thumb\'])}')">
 					<div class="wow vc022_rcon right_fade_in">
 						<span class="span_ltitle_cw" style="display: block;">{$tqk.post_title}</span>
 						<div class="abtn02" style="display: inline-block;">
@@ -84,7 +92,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="var_con h500 vcon_bg04 clearfix">
+				<div class="var_con h500 vcon_bg04 clearfix" style="background: url('{:sp_get_asset_upload_path($smeta8[\'thumb\'])}')" >
 					<div class="vc04_left">
 						<div class="wow vc021_rcon left_fade_in">
 							<span class="span_ltitle_cw">{$class.post_title}</span>

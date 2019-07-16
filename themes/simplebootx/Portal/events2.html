@@ -22,10 +22,10 @@
 				$smeta1=json_decode($servies2['smeta'], true);
 			</php>
 				<div class="events_con clearfix">
-					<a class="link_events_50 event_btop01" href="javascript:void(0)">
+					<a class="link_events_50 event_btop01" style="background: url('{:sp_get_asset_upload_path($smeta1[\'thumb\'])}')" href="javascript:void(0)">
 						<div class="wow animate_con left_fade_in event_active">
-							<h3>{$servies2.post_keywords}{$servies2.post_title}</h3>
-							<h4>{$servies2.post_excerpt}</h4>
+							<!--<h3>{$servies2.post_keywords}{$servies2.post_title}</h3>
+							<h4>{$servies2.post_excerpt}</h4>-->
 							{$servies2.post_content}
 						</div>
 					</a>

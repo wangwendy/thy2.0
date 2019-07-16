@@ -18,9 +18,10 @@
 			<tc_include file="Public:nav2" />
 			<php>
 				$servies3 = sp_sql_post(38,'');
+				$smeta1=json_decode($servies3['smeta'], true);
 			</php>
 			<div class="content">
-				<div class="banner clearfix" style="background-position: top;">
+				<div class="banner clearfix" style="background: url('{:sp_get_asset_upload_path($smeta1[\'thumb\'])}');background-position: top;">
 					<a class="banner_link" href="javascript:void(0);">
 						<div class="wow banner_con left_fade_in">
 							<div class="animate_con">

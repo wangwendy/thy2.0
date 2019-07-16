@@ -18,8 +18,9 @@
 			<div class="content1">
 				<php>
 					$servies1 = sp_sql_post(36,'');
+					$smeta1=json_decode($servies1['smeta'], true);
 				</php>
-				<div class="banner1 clearfix">
+				<div class="banner1 clearfix" style="background: url('{:sp_get_asset_upload_path($smeta1[\'thumb\'])}')">
 					<div class="wow banner1_con left_fade_in">
 						<div class="animate_con">
 							<h3>{$servies1.post_title}</h3>

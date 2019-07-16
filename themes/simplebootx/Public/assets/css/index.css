@@ -19,32 +19,32 @@
 	height: 500px;
 }
 .vcon_bg01-1{
-	background: url(../images/index/banner01.jpg);
+	/*background: url(../images/index/banner01.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
 .vcon_bg01-2{
-	background: url(../images/index/banner02.jpg);
+	/*background: url(../images/index/banner02.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
 .vcon_bg01-3{
-	background: url(../images/index/banner03.jpg);
+	/*background: url(../images/index/banner03.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
 .vcon_bg03{
-	background: url(../images/index/var03.jpg);
+	/*background: url(../images/index/var03.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
 .vcon_bg04{
-	background: url(../images/index/var04.jpg);
+	/*background: url(../images/index/var04.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
 .vcon_bg05{
-	background: url(../images/index/var05.jpg);
+	/*background: url(../images/index/var05.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
@@ -120,7 +120,7 @@
 	height: 100%;
 	float: left;
 	position: relative;
-	background: url(../images/index/var02_1.jpg);
+	/*background: url(../images/index/var02_1.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
@@ -151,7 +151,7 @@
 	height: 100%;
 	position: relative;
 	float: left;
-	background: url(../images/index/var02_2.jpg);
+	/*background: url(../images/index/var02_2.jpg);*/
 	background-size: cover;
 	background-position: center;
 }
